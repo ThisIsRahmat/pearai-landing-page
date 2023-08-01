@@ -24,14 +24,21 @@ export default function InteriorDemo() {
         {/* Add more design styles as needed */}
       </div>
 
-        {/* iPhone Mockup Image */}
-        <div className="absolute ">
+         {/* iPhone Mockup Image */}
+      {/* Video Mockup */}
+      <div className=" flex justify-center absolute top-10 left-0" style={{ transform: 'rotate(20deg)', transformOrigin: 'left top' }}>
+    <video width={300} height={704} controls autoPlay muted>
+      <source src="/mock_up_video_3.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-        </div>
+
+
   
         {/* Table with Interior Projects */}
-        <div className="p-4 ml-8">
-          <table className="w-full border-collapse rounded-lg">
+        <div className="p-6 ml-3" style={{ marginTop: '-80px' }}>
+          <table className="w-full border-collapse rounded-lg" style={{ background: 'white' }}>
             <tbody>
               <tr>
                 <td className="border border-green-700 rounded-lg p-4" style={{ height: '280px', background: 'white' }}>
@@ -56,14 +63,14 @@ export default function InteriorDemo() {
               </tr>
               {/* Add more rows of projects */}
               <tr>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px', background: 'white' }}>
+                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px'}}>
                   {/* <img src="/path/to/project-image-3.jpg" alt="Project 3" className="..." /> */}
                   <div className="text-center">
                     <p>Project Title 3</p>
                     <p>$150</p>
                   </div>
                 </td>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px', background: 'white' }}>
+                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px' }}>
                   {/* <img src="/path/to/project-image-4.jpg" alt="Project 4" className="..." /> */}
                   <div className="text-center">
                     <p>Project Title 4</p>
@@ -72,14 +79,14 @@ export default function InteriorDemo() {
                 </td>
               </tr>
               <tr>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px', background: 'white' }}>
+                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px' }}>
                  {/* <img src="/path/to/project-image-3.jpg" alt="Project 3" className="..." />  */}
                   <div className="text-center">
                     <p>Project Title 3</p>
                     <p>$150</p>
                   </div>
                 </td>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px', background: 'white' }}>
+                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px' }}>
                   {/* <img src="/path/to/project-image-4.jpg" alt="Project 4" className="..." /> */}
                   <div className="text-center">
                     <p>Project Title 4</p>
