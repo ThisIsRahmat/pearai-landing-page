@@ -5,7 +5,7 @@ export default function SubHeading() {
         <>
         <div>
       <p className=" text-green-700">
-        Finally, an AI decorator understands your style and budget. Get personalized recs by simply uploding your pins or pics.
+        Finally, an AI decorator understands your <br/>style and budget. Get personalized recs by <br/>simply uploding your pins or pics.
       </p>
 <br/>
       <p className=" text-green-700">
