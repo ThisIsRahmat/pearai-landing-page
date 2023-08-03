@@ -17,8 +17,8 @@ export default function Logo() {
               <span className="sr-only">Pear</span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+                src="pear_logo.svg"
+                alt="Pear Logo"
               />
             </a>
           </div>

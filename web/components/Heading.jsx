@@ -1,11 +1,12 @@
 export default function Heading() {
     return (
       <>
-        <div className="text-9xl font-bold tracking-tight text-green-700 sm:text-6xl mt-2">
+        <div className=" font-bold tracking-tight text-[#004F30] sm:text-6xl ">
           <h1
-            className="mx-auto tracking-wider"
+            className="mx-auto tracking-wider  text-[79.95px]"
             aria-label="Decor magic at your fingertips"
-            style={{ fontSize: '5.5rem' }} // Double the text size (2 * 2.25rem)
+             // Double the text size (2 * 2.25rem)
+            
           >
             <span className="block text-right" style={{ marginRight: '3.5rem' }}>DECOR</span> {/* Adjust the value here */}
             <span className="block text-left" style={{ marginLeft: '-1.5rem' }}>MAGIC</span>

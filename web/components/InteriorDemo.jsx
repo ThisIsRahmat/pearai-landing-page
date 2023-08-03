@@ -14,10 +14,10 @@ export default function InteriorDemo() {
         <button className="block text-green-700 font-semibold mb-2">Coastal</button>
          */}
 
-<div className="text-green-700 font-semibold "><button className="text-transform: uppercase"> Mid-Century Modern</button></div>
-  <div className="text-green-700 font-semibold"><button className="text-transform: uppercase"> Scandinavian< /button></div>
-  <div className="text-green-700 font-semibold"> <button className="text-transform: uppercase"> Contemporary</button></div>
-  <div className="text-green-700 font-semibold"><button className="text-transform: uppercase"> Coastal</button></div>
+<div className=" text-[19.04px] text-[#004F30] font-semibold "><button className="text-transform: uppercase"> Mid-Century Modern</button></div>
+  <div className=" text-[19.04px] text-[#004F30] font-semibold"><button className="text-transform: uppercase"> Scandinavian< /button></div>
+  <div className=" text-[19.04px] text-[#004F30] font-semibold"> <button className="text-transform: uppercase"> Contemporary</button></div>
+  <div className=" text-[19.04px] text-[#004F30] font-semibold"><button className="text-transform: uppercase"> Coastal</button></div>
 
 
         
@@ -26,12 +26,12 @@ export default function InteriorDemo() {
 
          {/* iPhone Mockup Image */}
       {/* Video Mockup */}
-      <div className=" flex justify-center absolute top-10 left-0" style={{ transform: 'rotate(20deg)', transformOrigin: 'left top' }}>
+      {/* <div className=" flex justify-center absolute top-10 left-0" style={{ transform: 'rotate(20deg)', transformOrigin: 'left top' }}>
     <video width={300} height={704} controls autoPlay muted>
       <source src="/mock_up_video_3.mov" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-  </div>
+  </div> */}
 
 
 

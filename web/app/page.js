@@ -7,7 +7,7 @@ import InteriorDemo from 'components/InteriorDemo';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between p-24 bg-purple-300">
+    <main className="flex min-h-screen flex-col justify-between p-28 bg-[#D4BBF8]">
       <Logo />
       <div className="flex justify-between items-start">
         <div className="flex flex-col">
