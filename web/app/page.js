@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Logo from 'components/Logo';
 import Heading from 'components/Heading';
-import SubHeading from 'components/SubHeading';
-import EarlyAccess from 'components/EarlyAccess';
+import Waitlist from 'components/Waitlist';
 import InteriorDemo from 'components/InteriorDemo';
 
 export default function Home() {
@@ -10,10 +9,12 @@ export default function Home() {
     <main className="flex min-h-screen flex-col justify-between p-28 bg-[#D4BBF8]">
       <Logo />
       <div className="flex justify-between items-start">
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-start items-start ml-4 w-[40%]"> {/* Adjust ml-4 and width */}
           <Heading />
-          <SubHeading />
-          <EarlyAccess />
+  
+          <br/>
+          <br/>
+          <Waitlist />
         </div>
         <InteriorDemo />
       </div>

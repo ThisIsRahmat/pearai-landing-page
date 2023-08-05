@@ -14,6 +14,9 @@ module.exports = {
         '61.87': '61.87px',
 
     },
+    placeholderColor: {
+      'custom': '#004F30', // Replace with your desired color
+    },
     },
   },
   plugins: [],

@@ -36,67 +36,7 @@ export default function InteriorDemo() {
 
 
   
-        {/* Table with Interior Projects */}
-        <div className="p-6 ml-3" style={{ marginTop: '-80px' }}>
-          <table className="w-full border-collapse rounded-lg" style={{ background: 'white' }}>
-            <tbody>
-              <tr>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '280px', background: 'white' }}>
-                  {/* <img
-                    src="/path/to/project-image-1.jpg"
-                    alt="Project 1"
-                    className="w-full h-40 object-cover rounded-lg mb-2"
-                  /> */}
-                  <div className="text-center">
-                    <p>West Elm</p>
-                    <p>$300</p>
-                  </div>
-                </td>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '280px', background: 'white' }}>
-                  {/* Add more grid cells with project images and details */}
-                  {/* <img src="/path/to/project-image-2.jpg" alt="Project 2" className="..." /> */}
-                  <div className="text-center">
-                    <p>Project Title 2</p>
-                    <p>$200</p>
-                  </div>
-                </td>
-              </tr>
-              {/* Add more rows of projects */}
-              <tr>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px'}}>
-                  {/* <img src="/path/to/project-image-3.jpg" alt="Project 3" className="..." /> */}
-                  <div className="text-center">
-                    <p>Project Title 3</p>
-                    <p>$150</p>
-                  </div>
-                </td>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px' }}>
-                  {/* <img src="/path/to/project-image-4.jpg" alt="Project 4" className="..." /> */}
-                  <div className="text-center">
-                    <p>Project Title 4</p>
-                    <p>$250</p>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px' }}>
-                 {/* <img src="/path/to/project-image-3.jpg" alt="Project 3" className="..." />  */}
-                  <div className="text-center">
-                    <p>Project Title 3</p>
-                    <p>$150</p>
-                  </div>
-                </td>
-                <td className="border border-green-700 rounded-lg p-4" style={{ height: '180px' }}>
-                  {/* <img src="/path/to/project-image-4.jpg" alt="Project 4" className="..." /> */}
-                  <div className="text-center">
-                    <p>Project Title 4</p>
-                    <p>$250</p>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+
       </div>
     );
   }
