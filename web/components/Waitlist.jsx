@@ -1,6 +1,6 @@
 export default function Waitlist() {
   return (
-    <div className="bg-[#004F30] rounded-2xl w-503 h-349 -ml-6">
+    <div className="bg-[#004F30] rounded-2xl w-400 h-349 -ml-6">
       <div className="p-4"> {/* Add padding to the container */}
         {/* Paragraph content */}
         <div className="pb-2 text-[#E5D3FF] text-[18.12px]">
