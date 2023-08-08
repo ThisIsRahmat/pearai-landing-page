@@ -4,7 +4,7 @@ export default function Waitlist() {
       <div className="p-4"> {/* Add padding to the container */}
         {/* Paragraph content */}
         <div className="pb-2 text-[#E5D3FF] text-[18.12px]">
-          Finally, an AI decorator understands your style  <br/>and budget. Get personalized recs by simply <br/> uploading your pins or pics.
+          Finally, an AI decorator that understands your style  <br/>and budget. Get personalized recs by simply <br/> uploading your pins or pics.
           <div className="mt-2"> {/* Add margin-top for increased spacing */}
             Be the first to try!
           </div>
