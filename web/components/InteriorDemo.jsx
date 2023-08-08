@@ -44,8 +44,8 @@ export default function InteriorDemo() {
       </div>
 
 
-      {/* Video Mockup */}
-      <div className="flex justify-center absolute bottom-8 left-20" style={{ transform: 'rotate(20deg)', transformOrigin: 'left top' }}>
+{/* Video Mockup */}
+<div className="flex justify-center absolute bottom-8 left-20" style={{ transform: 'rotate(20deg)', transformOrigin: 'left top' }}>
         <video width={250} height={300} controls autoPlay muted>
           <source src="video_demos/mock_up_video_3.mov" type="video/mp4" />
           Your browser does not support the video tag.
@@ -54,19 +54,31 @@ export default function InteriorDemo() {
 
       {/* Table with Interior Projects */}
       <div class="border-[2px] rounded-lg overflow-hidden border-green-700">
-        <table className="w-full border-collapse rounded-l overflow-hidden text-[12.23px] text-[#004F30]" style={{ height: '188px', background: 'white' }}>
+        <table className="w-full border-collapse rounded-l overflow-hidden text-[12.23px] text-[#004F30]" style={{ height: 'calc(150px + 150px + 150px)', background: 'white', width: '427.77px' }}>
           <tbody>
             <tr>
-              <td className="border-[2px] border-green-700 p-4" style={{ height: '200px', width: '200px' }}>
+              <td className="border-[2px] border-green-700 p-4" style={{ height: '10 0px', width: '200px' }}>
                 {/* Add border class and padding */}
                 <div className="text-center">
+                  <Image
+                    src="/contemporary/contemporary_1.png"
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                  />
                   <p>West Elm</p>
                   <p>$300</p>
                 </div>
               </td>
-              <td className="border-[2px] border-green-700 p-4" style={{ height: '220px', width: '215px' }}>
+              <td className="border-[2px] border-green-700 p-4" style={{ height: '150px', width: '200px' }}>
                 {/* Add border class and padding */}
                 <div className="text-center">
+                  <Image
+                    src="/contemporary/contemporary_2.png"
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                  />
                   <p>Project Title 2</p>
                   <p>$200</p>
                 </div>
@@ -74,9 +86,15 @@ export default function InteriorDemo() {
             </tr>
 
             <tr>
-              <td className="border-[2px] border-green-700 p-4" style={{ height: '220px' }}>
+              <td className="border-[2px] border-green-700 p-4"  style={{ height: '150px', width: '200px' }}>
                 {/* Add border class and padding */}
                 <div className="text-center">
+                  <Image
+                    src="/contemporary/contemporary_3.png"
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                  />
                   <p>Project Title 3</p>
                   <p>$150</p>
                 </div>
@@ -84,15 +102,27 @@ export default function InteriorDemo() {
               <td className="border-[2px] border-green-700 p-4">
                 {/* Add border class and padding */}
                 <div className="text-center">
+                  <Image
+                    src="/contemporary/contemporary_4.png"
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                  />
                   <p>Project Title 4</p>
                   <p>$250</p>
                 </div>
               </td>
             </tr>
             <tr>
-              <td className="border-[2px] border-green-700 p-4" style={{ height: '220px' }}>
+              <td className="border-[2px] border-green-700 p-4"  style={{ height: '100px', width: '200px' }}>
                 {/* Add border class and padding */}
                 <div className="text-center align-text-bottom">
+                  <Image
+                    src="/contemporary/contemporary_5.png"
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                  />
                   <p>Project Title 3</p>
                   <p>$150</p>
                 </div>
@@ -100,6 +130,12 @@ export default function InteriorDemo() {
               <td className="border-[2px] border-green-700 p-4">
                 {/* Add border class and padding */}
                 <div className="text-center">
+                  <Image
+                    src="/contemporary/contemporary_6.png"
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                  />
                   <p>Project Title 4</p>
                   <p>$250</p>
                 </div>
@@ -109,5 +145,9 @@ export default function InteriorDemo() {
         </table>
       </div>
     </div>
+  
+        
+
   );
 }
+ 

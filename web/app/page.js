@@ -6,7 +6,7 @@ import InteriorDemo from 'components/InteriorDemo';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between p-28 bg-[#D4BBF8]">
+    <main className="flex min-h-screen flex-col justify-between bg-[#D4BBF8] p-20">
       <Logo />
       <div className="flex justify-between items-start">
         <div className="flex flex-col justify-start items-start ml-4 w-[40%]"> {/* Adjust ml-4 and width */}
