@@ -1,33 +1,25 @@
-'use client'
-
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-
+import Link from 'next/link';
 
 export default function Logo() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
 
   return (
     <div>
- {/* To-do: replace placeholder logo with pear logo */}
-      <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      {/* To-do: replace placeholder logo with pear logo */}
+      <header className="absolute inset-x-4 top-4 z-50">
+        <nav className="flex items-center justify-between p-4 sm:p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="-m-0.5 p-0.5">
               <span className="sr-only">Pear</span>
               <img
-                className="h-8 w-auto"
+                className="h-6 sm:h-6 w-auto"
                 src="pear_logo.svg"
-                alt="Pear Logo"
+                alt="Pear logo"
               />
-            </a>
+            </Link>
           </div>
         </nav>
-
       </header>
-
-
-       </div>   
-
-  )
+    </div>
+  );
 }

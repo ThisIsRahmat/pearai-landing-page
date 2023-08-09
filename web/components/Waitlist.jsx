@@ -1,30 +1,28 @@
 export default function Waitlist() {
   return (
-    <div className="bg-[#004F30] rounded-2xl w-400 h-349 -ml-6">
-      <div className="p-4"> {/* Add padding to the container */}
+    <div className="bg-[#004F30] rounded-2xl sm:w-4/5 sm:h-[280px] h-[213px] w-[358px] sm:ml-4 mb-4">
+      <div className="p-4">
         {/* Paragraph content */}
-        <div className="pb-2 text-[#E5D3FF] text-[18.12px]">
-          Finally, an AI decorator that understands your style  <br/>and budget. Get personalized recs by simply <br/> uploading your pins or pics.
-          <div className="mt-2"> {/* Add margin-top for increased spacing */}
-            Be the first to try!
-          </div>
+        <div className="sm:pb-2 text-[#E5D3FF] sm:text-[18.12px] text-[15px]">
+          Finally, an AI decorator that understands your style
+          <br className="hidden "/>and budget. Get personalized recs by simply <br className="hidden sm:inline"/> uploading your pins or pics.
+          <div className="mt-1">Be the first to try!</div>
         </div>
       </div>
-       
-      {/* the p-4 controls the padding between he input and the edge of the div */}
-      <div className="p-4 -mt-6"> {/* Add padding to the container */}
+
+      <div className="p-2 sm:-mt-6">
         <form className="flex flex-col">
           <input
             id="email"
             name="email"
             type="email"
             placeholder="Enter your Email"
-            className="flex rounded-xl py-1 px-4 mb-2 bg-[#E5D3FF] text-[#004F30] text-[21.05px]  placeholder-custom" 
+            className="flex rounded-xl py-1 px-4 mb-2 bg-[#E5D3FF] text-[#004F30] sm:text-[21.05px] text-[15px] placeholder-custom"
           />
 
           <button
             type="submit"
-            className="flex rounded-xl justify-center py-1 px-4 shadow-sm bg-[#C6FD9D] text-[21.05px] text-[#004F30]"
+            className="flex rounded-xl justify-center py-1 px-4 shadow-sm bg-[#C6FD9D] sm:text-[21.05px] text-[#004F30] text-[15px]"
           >
             Get Early Access
           </button>

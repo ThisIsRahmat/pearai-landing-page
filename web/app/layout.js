@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={hkgrotesk.className} >{children}</body>
+      <body className={`${hkgrotesk.className} bg-[#D4BBF8]`} >{children}</body>
     </html>
   )
 }
