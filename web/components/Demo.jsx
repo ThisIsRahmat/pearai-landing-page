@@ -25,20 +25,20 @@ export default function Demo() {
     <div className="relative flex justify-center flex-row space-x-3"> {/* Add space-x-10 for gap */}
 
 {/* List of Design Styles */}
-<div className="sm:space-y-2 w-1/3 text-right text-[13.13px] sm:text-[19.04px]">
-        <div className="bg-[#004F30] rounded-xl p-1 sm:-mt-1">
-          <div className="sm:text-[19.04px] text-[#D4BBF8] font-semibold ">
-            <button className="uppercase">Contemporary</button>
-          </div>
+<div className="sm:space-y-2 w-1/3 sm:text-right text-left text-[13.13px] sm:text-[19.04px]">
+        <div className="rounded-xl p-1 sm:-mt-1">
+   
+            <button className="uppercase sm:text-[19.04px] text-[#D4BBF8] rounded-xl  p-1 sm:-mt-1 bg-[#004F30] font-semibold">Contemporary</button>
+
         </div>
         <div className=" text-[#004F30] font-semibold uppercase">
-          <button className="uppercase">Scandinavian</button>
+          <button  className="uppercase sm:text-[19.04px] text-[#004F30] rounded-xl  p-1 sm:-mt-1  font-semibold">Scandinavian</button>
         </div>
         <div className="text-[#004F30] font-semibold uppercase">
-          <button className="uppercase">Mid-century modern</button>
+          <button  className="uppercase sm:text-[19.04px] text-[#004F30] rounded-xl  p-1 sm:-mt-1  font-semibold">Mid-century modern</button>
         </div>
         <div className=" text-[#004F30] font-semibold uppercase">
-          <button className="uppercase">Coastal</button>
+          <button  className="uppercase sm:text-[19.04px] text-[#004F30]rounded-xl  p-1 sm:-mt-1  font-semibold">Coastal</button>
         </div>
 
       </div>
