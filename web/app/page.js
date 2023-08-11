@@ -4,6 +4,7 @@ import Logo from 'components/Logo';
 import Hero from 'components/Hero';
 import Waitlist from 'components/Waitlist';
 import Demo from 'components/Demo';
+import PhoneFrame from 'components/PhoneFrame';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           <br />
           <Waitlist />
         </div>
+        <PhoneFrame/>
         <Demo />
       </div>
     </main>
