@@ -16,6 +16,14 @@ const designStyles = [
       'contemporary_5.png',
       'contemporary_6.png',
     ],
+    photo_title: [
+      'contemporary_1.png',
+      'contemporary_2.png',
+      'contemporary_3.png',
+      'contemporary_4.png',
+      'contemporary_5.png',
+      'contemporary_6.png',
+    ],
     video: 'contemporary_demo.mp4',
   },
   {
@@ -27,6 +35,14 @@ const designStyles = [
       'scandinavian_4.png',
       'scandinavian_5.png',
       'scandinavian_6.png',
+    ],
+    photo_title: [
+      'contemporary_1.png',
+      'contemporary_2.png',
+      'contemporary_3.png',
+      'contemporary_4.png',
+      'contemporary_5.png',
+      'contemporary_6.png',
     ],
     video: 'scandinavian_demo.mp4',
   },
@@ -40,6 +56,14 @@ const designStyles = [
       'mid-century_modern_5.png',
       'mid-century_modern_6.png',
     ],
+    photo_title: [
+      'contemporary_1.png',
+      'contemporary_2.png',
+      'contemporary_3.png',
+      'contemporary_4.png',
+      'contemporary_5.png',
+      'contemporary_6.png',
+    ],
     video: 'midcentury_demo.mp4',
   },
   {
@@ -52,16 +76,24 @@ const designStyles = [
       'coastal_5.png',
       'coastal_6.png',
     ],
+    photo_title: [
+      'contemporary_1.png',
+      'contemporary_2.png',
+      'contemporary_3.png',
+      'contemporary_4.png',
+      'contemporary_5.png',
+      'contemporary_6.png',
+    ],
     video: 'coastal_demo.mp4',
   },
 ];
 
 export default function Demo() {
 
-  const [selectedStyle, setSelectedStyle] = useState(null);
+  const [selectedStyle, setSelectedStyle] = useState('Contemporary');
 
   const handleStyleClick = (style) => {
-    setSelectedStyle(style === selectedStyle ? null : style);
+    setSelectedStyle((prevStyle) => (prevStyle === style ? prevStyle : style));
   };
 
     // Find the selected design style based on the selectedStyle
@@ -109,40 +141,47 @@ export default function Demo() {
 
 
 
-      {/* <div className="sm:w-1/3 border-[2px] rounded-lg overflow-hidden border-green-700 mt-4">
-        <table className="w-full border-collapse rounded-l overflow-hidden sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ height: 'calc(100vh - 150px)', background: 'white' }}>
-          <tbody> */}
-    {/* Table with Interior Projects */}
-  {/* Table with Interior Projects */}
-  <div className="sm:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 ">
-      <table className="w-full border-collapse rounded-l overflow-hidden sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
-        <tbody>
-          {selectedDesignStyle &&
-            [...Array(3)].map((_, rowIndex) => (
-              <tr key={rowIndex}>
-                {[0, 1].map((colIndex) => {
-                  const photoIndex = rowIndex * 2 + colIndex;
-                  const photo = selectedDesignStyle.photos[photoIndex];
-                  return (
-                    <td
-                      key={colIndex}
-                      className="border-[2px] border-green-700 p-4"
-                      style={{ height: '150px', width: '200px' }}
-                    >
-                      {photo && (
-                        <div className="text-center">
-                          <Image src={`/${selectedStyle}/${photo}`} width={500} height={500} alt="Interior" />
-                          <p>Interior Title $200</p>
-                        </div>
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
-        </tbody>
-      </table>
-    </div>
+{/* Table with Interior Projects */}
+<div className="sm:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 " style={{ width: '427.77px', height: '731px' }}>
+  <table className="w-full border-collapse rounded-l overflow-hidden sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
+    <tbody>
+      {selectedDesignStyle &&
+        [...Array(Math.ceil(selectedDesignStyle.photos.length / 2))].map((_, rowIndex) => (
+          <tr key={rowIndex} style={{ height: `${731 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
+            {[0, 1].map((colIndex) => {
+              const photoIndex = rowIndex * 2 + colIndex;
+              const photo = selectedDesignStyle.photos[photoIndex];
+              return (
+                <td
+                  key={colIndex}
+                  className="border-[2px] border-green-700 p-4"
+                  style={{ width: '50%', position: 'relative' }}
+                >
+                  <div
+                    className="h-full flex items-center justify-center"
+                    style={{ width: '100%', paddingTop: '98%', position: 'relative' }}
+                  >
+                    {photo && (
+                      <Image
+                        src={`/${selectedStyle}/${photo}`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Interior"
+                      />
+                    )}
+                  </div>
+                  {/* <p>Interior Title $200</p> */}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+    </tbody>
+  </table>
+</div>
+
+
+
 
     </div>
   
