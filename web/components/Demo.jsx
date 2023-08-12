@@ -16,7 +16,7 @@ const designStyles = [
       'contemporary_5.png',
       'contemporary_6.png',
     ],
-    photo_title: [
+    photo_titles: [
       'contemporary_1.png',
       'contemporary_2.png',
       'contemporary_3.png',
@@ -36,7 +36,7 @@ const designStyles = [
       'scandinavian_5.png',
       'scandinavian_6.png',
     ],
-    photo_title: [
+    photo_titles: [
       'contemporary_1.png',
       'contemporary_2.png',
       'contemporary_3.png',
@@ -56,7 +56,7 @@ const designStyles = [
       'mid-century_modern_5.png',
       'mid-century_modern_6.png',
     ],
-    photo_title: [
+    photo_titles: [
       'contemporary_1.png',
       'contemporary_2.png',
       'contemporary_3.png',
@@ -76,7 +76,7 @@ const designStyles = [
       'coastal_5.png',
       'coastal_6.png',
     ],
-    photo_title: [
+    photo_titles: [
       'contemporary_1.png',
       'contemporary_2.png',
       'contemporary_3.png',
@@ -151,6 +151,7 @@ export default function Demo() {
             {[0, 1].map((colIndex) => {
               const photoIndex = rowIndex * 2 + colIndex;
               const photo = selectedDesignStyle.photos[photoIndex];
+              const photo_title = selectedDesignStyle.photo_titles[photoIndex];
               return (
                 <td
                   key={colIndex}
@@ -170,7 +171,20 @@ export default function Demo() {
                       />
                     )}
                   </div>
-                  {/* <p>Interior Title $200</p> */}
+
+           
+                  <div className="text-center mt-2">
+  {photo_title && (
+     <p
+     className="text-[12.23px] text-center text-transform: capitalize mb-2"
+     style={{ fontFamily: 'Sofiapro, sans-serif' }}
+   >
+      {photo_title}
+    </p>
+  )}
+</div>
+
+
                 </td>
               );
             })}
