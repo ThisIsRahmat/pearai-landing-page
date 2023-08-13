@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import PhoneFrame  from '/components/PhoneFrame'
 
+
+
 const designStyles = [
   {
     title: 'Contemporary',
@@ -124,20 +126,35 @@ export default function Demo() {
 </div>
 
 
-  {/* Video Mockup */}
+    {/* Video Mockup */}
+   {/* Video Mockup */}
+      {/* Video Mockup */}
+      <PhoneFrame videoSrc="/video_demos/interior_demo.mp4">
+        <video
+          width={100}
+          height={100}
+          playsInline
+          muted
+          loop
+          src="/video_demos/interior_demo.mp4"
+        ></video>
+        <Image
+          className="w-full h-auto -rotate-45 scale-75"
+          src="/phone-frame.svg"
+          alt="Phone Frame"
+          objectFit="contain"
+          layout="fill"
+        />
+      </PhoneFrame>
+
+ 
+    {/* <video className="object-contain" autoPlay muted loop>
+      <source src="/video_demos/interior_demo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video> */}
   
-  {/* <div className="relative sm:w-[250px] sm:h-[500px]"> */}
-  <div className=" w-1/3 mt-4 flex justify-center absolute sm:inset-x-1 sm:left-2" style={{ transform: 'rotate(30deg)', transformOrigin: 'left bottom' }}>
-  <PhoneFrame className="" priority> 
-        <div className="absolute bottom-0 right-0 w-full h-full">
-          <video className="w-full h-full object-contain" autoPlay muted loop>
-            <source src="/video_demos/interior_demo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          </div>
-          </PhoneFrame>
-        
-      </div>
+
+
 
 
 
