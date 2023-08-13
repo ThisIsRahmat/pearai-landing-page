@@ -131,11 +131,13 @@ export default function Demo() {
       {/* Video Mockup */}
       <PhoneFrame videoSrc="/video_demos/interior_demo.mp4">
         <video
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           playsInline
           muted
           loop
+          controls
+          transform="rotateZ(45deg)"
           src="/video_demos/interior_demo.mp4"
         ></video>
         <Image

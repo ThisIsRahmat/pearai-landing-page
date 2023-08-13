@@ -4,14 +4,15 @@ import Image from 'next/image';
 const PhoneFrame = ({ videoSrc }) => {
   return (
     <div
-      className="w-full h-auto -rotate-45 scale-75"
+      className="w-full h-auto "
       style={{position: "relative"}}
     >
       <video
-        className=""
+        className="scale-[.35] translate-z-20px "
         playsInline
         muted
         loop
+        controls
         src={videoSrc}
       ></video>
       <Image
