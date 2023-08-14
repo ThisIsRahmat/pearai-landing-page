@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import PhoneFrame  from '/components/PhoneFrame'
+import Phone  from '../assets/rectangle.svg';
 
 
 
@@ -103,15 +103,16 @@ export default function Demo() {
 
 
   return (
-    <div className="relative flex justify-center flex-row space-x-3"> {/* Add space-x-10 for gap */}
+    <div className="grid grid-flow-col grid-rows-3 gap-4"> {/* Add space-x-10 for gap */}
+
+
 
 {/* List of Design Styles */}
-
-<div className="sm:space-y-2 w-1/3 text-right text-[13.13px] sm:text-[19.04px]">
+<div className="sm:space-y-2 w-1/3 text-[13.13px] sm:text-[19.04px] col-span-2">
   {designStyles.map((style) => (
     <div key={style.title} className="mb-1">
       <button
-        className={`uppercase sm:text-[19.04px] p-1 sm:-mt-1 -ml-10 ${
+        className={`uppercase sm:text-[19.04px] p-1 sm:-mt-1 -ml-10 text-right ${
           selectedStyle === style.title
             ? 'text-[#D4BBF8] font-semibold bg-[#004F30] rounded-md p-1 sm:pl-3 pr-3'
             : 'text-[#004F30] font-semibold p-1 sm:pl-3 pr-3'
@@ -125,43 +126,28 @@ export default function Demo() {
   ))}
 </div>
 
+<div className="col-span-2 row-span-2">
+ {/* Video Mockup */}
+ <div className="scale-[.25] w-0 h-0"
+      style={{position: "relative"}} >
+<Phone>
+<video className="w-full h-full object-contain" autoPlay muted loop>
+            <source src={`/video_demos/${selectedDesignStyle.video}`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+</Phone>
+</div>
+</div>
 
-    {/* Video Mockup */}
-   {/* Video Mockup */}
-      {/* Video Mockup */}
-      <PhoneFrame videoSrc="/video_demos/interior_demo.mp4">
-        <video
-          width={200}
-          height={200}
-          playsInline
-          muted
-          loop
-          controls
-          transform="rotateZ(45deg)"
-          src="/video_demos/interior_demo.mp4"
-        ></video>
-        <Image
-          className="w-full h-auto -rotate-45 scale-75"
-          src="/phone-frame.svg"
-          alt="Phone Frame"
-          objectFit="contain"
-          layout="fill"
-        />
-      </PhoneFrame>
+
 
  
-    {/* <video className="object-contain" autoPlay muted loop>
-      <source src="/video_demos/interior_demo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video> */}
   
 
 
 
-
-
 {/* Table with Interior Projects */}
-<div className="sm:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 " style={{ width: '427.77px', height: '731px' }}>
+<div className="row-span-3 sm:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 " style={{ width: '427.77px', height: '731px' }}>
   <table className="w-full border-collapse rounded-l overflow-hidden sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
     <tbody>
       {selectedDesignStyle &&
@@ -212,6 +198,8 @@ export default function Demo() {
     </tbody>
   </table>
 </div>
+
+
 
 
 

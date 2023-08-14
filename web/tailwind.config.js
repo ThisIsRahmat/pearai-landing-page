@@ -18,11 +18,11 @@ module.exports = {
         'custom': '#004F30', // Replace with your desired color
       },
       // custom transform utilities
-      // transform: {
-      //   translateX: '20px',
-      //   translateY: '-20px',
-      //   translateZ: '20px',
-      // },
+      transform: {
+        translateX: '20px',
+        translateY: '-20px',
+        translateZ: '20px',
+      },
     },
   },
   plugins: [],
