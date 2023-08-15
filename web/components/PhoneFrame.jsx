@@ -4,7 +4,7 @@ import Image from 'next/image';
 const PhoneFrame = ({ videoSrc }) => {
   return (
     <div
-      className="w-full h-auto -rotate-45 scale-75"
+      className="w-full h-auto scale-75"
       style={{position: "relative"}}
     >
       <video
@@ -16,7 +16,7 @@ const PhoneFrame = ({ videoSrc }) => {
       ></video>
       <Image
         className="w-full h-auto -rotate-45 scale-75"
-        src="/phone-frame.svg"
+        src="../assets/rectangle.svg"
         alt="Phone Frame"
         objectFit="contain"
         layout="fill"

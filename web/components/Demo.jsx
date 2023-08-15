@@ -3,7 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import PhoneFrame  from '/components/PhoneFrame'
+// // import PhoneFrame  from '/components/PhoneFrame'
+import Phone  from '../assets/rectangle.svg';
 
 
 
@@ -103,11 +104,14 @@ export default function Demo() {
 
 
   return (
-    <div className="relative flex justify-center flex-row space-x-3"> {/* Add space-x-10 for gap */}
+    <div className="relative flex justify-center flex-row space-x-3">  {/* Add space-x-10 for gap */}
+
+
 
 {/* List of Design Styles */}
 
-<div className="sm:space-y-2 w-1/3 text-right text-[13.13px] sm:text-[19.04px]">
+<div className="sm:space-y-2 w-1/3 text-right text-[13.13px] sm:text-[19.04px]"> 
+<div className="flex-col">
   {designStyles.map((style) => (
     <div key={style.title} className="mb-1">
       <button
@@ -123,38 +127,34 @@ export default function Demo() {
       </button>
     </div>
   ))}
-</div>
 
 
-    {/* Video Mockup */}
-   {/* Video Mockup */}
-      {/* Video Mockup */}
-      <PhoneFrame videoSrc="/video_demos/interior_demo.mp4">
-        <video
-          width={100}
-          height={100}
+
+<div className="-ml-9 mt-9 mr-4">
+  <div className="scale-[.25] w-0 h-0 z-10"
+      style={{position: "relative"}} >
+
+  {/* Phone SVG */}
+  <Phone className="skew-x-3 -skew-y-1 " />
+    
+
+    
+     </div>
+     </div>
+
+       {/* Video Mockup */}
+       <video
+          width={195}
+          height={115}
           playsInline
           muted
           loop
+          autoPlay
           src="/video_demos/interior_demo.mp4"
+          className=" origin-top-left scale-[.95] rotate-[25deg] rounded-md skew-x-4 -skew-y-4" 
         ></video>
-        <Image
-          className="w-full h-auto -rotate-45 scale-75"
-          src="/phone-frame.svg"
-          alt="Phone Frame"
-          objectFit="contain"
-          layout="fill"
-        />
-      </PhoneFrame>
-
- 
-    {/* <video className="object-contain" autoPlay muted loop>
-      <source src="/video_demos/interior_demo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video> */}
-  
-
-
+  </div>
+  </div>
 
 
 
