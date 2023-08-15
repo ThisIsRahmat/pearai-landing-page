@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import PhoneFrame  from '/components/PhoneFrame'
-
+import Phone  from '../assets/rectangle.svg';
+// import PhoneFrame  from '/components/PhoneFrame'
 
 
 const designStyles = [
@@ -103,11 +103,15 @@ export default function Demo() {
 
 
   return (
-    <div className="relative flex justify-center flex-row space-x-3"> {/* Add space-x-10 for gap */}
+
+<div className="relative flex justify-center flex-row space-x-3"> 
+{/* <div className="flex flex-row justify-between items-center md:items-start"> */} 
+
 
 {/* List of Design Styles */}
 
-<div className="sm:space-y-2 w-1/3 text-right text-[13.13px] sm:text-[19.04px]">
+ <div className="sm:space-y-2 w-1/3 text-right text-[13.13px] sm:text-[19.04px]"> 
+ <div className="flex-col">
   {designStyles.map((style) => (
     <div key={style.title} className="mb-1">
       <button
@@ -123,17 +127,62 @@ export default function Demo() {
       </button>
     </div>
   ))}
+
+  
+    {/* Video Mockup */}
+  <div className="-ml-9 mt-9 mr-4 grow">
+  <div className="scale-[.25] w-0 h-0"
+      style={{position: "relative"}} >
+ {/* <PhoneFrame videoSrc="/video_demos/interior_demo.mp4">
+        <video
+          width={100}
+          height={100}
+          playsInline
+          muted
+          loop
+          src="/video_demos/interior_demo.mp4"
+        ></video>
+        <Image
+          className="w-full h-auto -rotate-45 scale-75"
+          src="/phone-frame.svg"
+          alt="Phone Frame"
+          objectFit="contain"
+          layout="fill"
+        />
+      </PhoneFrame> */}
+
+
+  {/* Phone SVG */}
+  <Phone className="skew-x-3 -skew-y-1" />
+
+  {/* Video overlay */}
+    <video
+      className="w-full h-full object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src="/video_demos/interior_demo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+
+
+
 </div>
-
-
-
-      {/* Video Mockup */}
+</div>
+ 
+  </div>
+</div>
 
 
 
 
 {/* Table with Interior Projects */}
-<div className="sm:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 " style={{ width: '427.77px', height: '731px' }}>
+<div className="md:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 w-[427.77px] h-[731px]">
+
+{/* <div className="sm:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 " style={{ width: '427.77px', height: '731px' }}> */}
   <table className="w-full border-collapse rounded-l overflow-hidden sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
     <tbody>
       {selectedDesignStyle &&
