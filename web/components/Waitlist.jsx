@@ -47,8 +47,10 @@ console.log("Testing whether emails are being submitted")
 
 
   return (
-    <div className="bg-[#004F30] rounded-2xl sm:w-4/5 sm:h-[280px] h-[213px] w-[358px] sm:ml-4 mb-4">
-      <div className="p-4">
+    <div className="bg-[#004F30] rounded-2xl sm:w-4/5 sm:h-[280px] h-[299px] w-[432px] sm:ml-4 mb-4">
+
+<div className="p-2"> 
+      <div className="p-4 mb-4">
         {/* Paragraph content */}
         <div className="sm:pb-2 text-[#E5D3FF] sm:text-[18.12px] text-[15px]">
           Finally, an AI decorator that understands your style
@@ -64,7 +66,7 @@ console.log("Testing whether emails are being submitted")
             name="email"
             type="email"
             placeholder="Enter your Email"
-            className="flex rounded-xl py-1 px-4 mb-2 bg-[#E5D3FF] text-[#004F30] sm:text-[21.05px] text-[15px] placeholder-custom"
+            className="flex rounded-xl py-2 px-4 mb-3 bg-[#E5D3FF] text-[#004F30] sm:text-[21.05px] text-[15px] placeholder-custom"
             onClick={() => {
               submitWaitlist({
                 email: document.getElementById("email").value
@@ -74,12 +76,12 @@ console.log("Testing whether emails are being submitted")
 
           <button
             type="submit"
-            className="flex rounded-xl justify-center py-1 px-4 shadow-sm bg-[#C6FD9D] sm:text-[21.05px] text-[#004F30] text-[15px]"
+            className="flex rounded-xl justify-center py-2 px-4 shadow-sm bg-[#C6FD9D] sm:text-[21.05px] text-[#004F30] text-[15px]"
           >
             Get Early Access
           </button>
         </form>
-
+      </div>
       </div>
     </div>
   );

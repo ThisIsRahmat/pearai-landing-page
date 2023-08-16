@@ -111,8 +111,10 @@ export default function Demo() {
 
 {/* List of Design Styles */}
 
-<div className="sm:space-y-2 w-1/3 text-right text-[13.13px] sm:text-[19.04px]  z-05"> 
+<div className="sm:space-y-2 w-1/3 sm:text-right text-[13.13px] sm:text-[19.04px]  z-05"> 
 <div className="flex-col">
+  <div class="basis-1/4">
+  
   {designStyles.map((style) => (
     <div key={style.title} className="mb-1">
       <button
@@ -128,28 +130,20 @@ export default function Demo() {
       </button>
     </div>
   ))}
+  </div>
 
-{/* <Spline scene="https://prod.spline.design/KPQv1yntXbsNDXLz/scene.splinecode" /> */}
 
-<div className="h-[800px] z-10 scale-[.95] left-3 bottom-3"  >
- 
+  <div className="h-screen relative z-10 sm:scale-[.95] left-3 bottom-3 basis-1/2">
+  <VideoDemo className="absolute bottom-2 left-3" />
+</div>
 
-<VideoDemo className="bottom-2"/>
-
-    
-
-    
-     {/* </div> */}
-     </div>
 
   
   </div>
   </div>
 
-
-
 {/* Table with Interior Projects */}
-<div className="sm:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 z-05 " style={{ width: '427.77px', height: '731px' }}>
+<div className="sm:border-[2.95px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 z-05 " style={{ width: '427.77px', height: '731px' }}>
   <table className="w-full border-collapse rounded-l overflow-hidden sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
     <tbody>
       {selectedDesignStyle &&
@@ -162,7 +156,7 @@ export default function Demo() {
               return (
                 <td
                   key={colIndex}
-                  className="border-[2px] border-green-700 p-4"
+                  className="border-[2.95px] rounded-lg border-green-700 p-4"
                   style={{ width: '50%', position: 'relative' }}
                 >
                   <div
