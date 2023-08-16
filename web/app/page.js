@@ -5,7 +5,7 @@ import Hero from 'components/Hero';
 import Waitlist from 'components/Waitlist';
 import Demo from 'components/Demo';
 import Arrow from 'components/Arrow';
-// import PhoneFrame from 'components/PhoneFrame';
+import VideoDemo from 'components/VideoDemo';
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
           <br />
           <Waitlist />
         </div>
-        {/* <PhoneFrame/> */}
+  {/* <VideoDemo/> */}
         <Arrow/>
         <Demo />
       </div>
