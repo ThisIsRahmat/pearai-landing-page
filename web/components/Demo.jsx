@@ -28,7 +28,7 @@ const designStyles = [
       'contemporary_5.png',
       'contemporary_6.png',
     ],
-    video: 'contemporary_demo.mp4',
+    spline_url: 'contemporary_demo.mp4',
   },
   {
     title: 'Scandinavian',
@@ -48,7 +48,7 @@ const designStyles = [
       'contemporary_5.png',
       'contemporary_6.png',
     ],
-    video: 'scandinavian_demo.mp4',
+    spline_url: 'scandinavian_demo.mp4',
   },
   {
     title: 'Mid-century modern',
@@ -68,7 +68,7 @@ const designStyles = [
       'contemporary_5.png',
       'contemporary_6.png',
     ],
-    video: 'midcentury_demo.mp4',
+    spline_url: 'midcentury_demo.mp4',
   },
   {
     title: 'Coastal',
@@ -88,7 +88,7 @@ const designStyles = [
       'contemporary_5.png',
       'contemporary_6.png',
     ],
-    video: 'coastal_demo.mp4',
+    spline_url: 'coastal_demo.mp4',
   },
 ];
 
@@ -131,10 +131,10 @@ export default function Demo() {
 
 {/* <Spline scene="https://prod.spline.design/KPQv1yntXbsNDXLz/scene.splinecode" /> */}
 
-<div className="h-[600px] z-10 scale-[.75]"  >
+<div className="h-[800px] z-10 scale-[.95] left-3 bottom-3"  >
  
 
-<VideoDemo />
+<VideoDemo className="bottom-2"/>
 
     
 
@@ -149,7 +149,7 @@ export default function Demo() {
 
 
 {/* Table with Interior Projects */}
-<div className="sm:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 " style={{ width: '427.77px', height: '731px' }}>
+<div className="sm:border-[2px] rounded-lg overflow-hidden mb-10 border-green-700 -mt-2 z-05 " style={{ width: '427.77px', height: '731px' }}>
   <table className="w-full border-collapse rounded-l overflow-hidden sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
     <tbody>
       {selectedDesignStyle &&
