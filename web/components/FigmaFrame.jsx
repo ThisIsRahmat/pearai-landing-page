@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import frame from '/assets/phone-frame.svg'
 import clsx from 'clsx'
 
