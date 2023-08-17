@@ -12,7 +12,7 @@ module.exports = {
       return config
     },
     images: {
-        loader: "akamai",
-        path: "/",
-      },
+        domains: ["vercel.app"],
+        },
+  
   }
