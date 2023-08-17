@@ -215,7 +215,7 @@ export default function Demo() {
                   
                     {photo && (
                       <Image
-                        src={`/../public/${selectedStyle}/${photo}`}
+                        src={`/${selectedStyle}/${photo}`}
                         layout="fill"
                         objectFit="contain"
                         alt="Interior product"
