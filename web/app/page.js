@@ -19,7 +19,7 @@ export default function Home() {
           <Waitlist />
         </div>
   {/* <VideoDemo/> */}
-        <Arrow/>
+        {/* <Arrow/> */}
         <Demo />
       </div>
     </main>

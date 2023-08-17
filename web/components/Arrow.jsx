@@ -8,7 +8,7 @@ export default function Logo() {
       {/* To-do: replace placeholder logo with pear logo */}
      
       
-      <div className="absolute bottom-16 right-14 transform -translate-x-1/2">
+      <div className="absolute  right-14 transform -translate-x-1/2">
 
           
               <span className="sr-only">Arrow design</span>

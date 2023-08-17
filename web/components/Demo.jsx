@@ -168,9 +168,21 @@ export default function Demo() {
 
   <div className="flex justify-center items-center mt-10">
   {/* VideoDemo */}
-  <div className="relative z-10 sm:scale-[.95] basis-1/2 rotate-[7deg]">
+  <div className="relative z-10 sm:scale-[.95] basis-1/2 rotate-[7deg] bottom-6 left-6">
     <VideoDemo className="absolute bottom-2 left-3" />
   </div>
+        
+{/* Arrow */}
+<div className="-left-55 flex scale-[.75] absolute bottom-20">
+    {/* Arrow SVG */}
+    <span className="sr-only">Arrow design</span>
+    <img
+      className=" left-10 w-auto rotate-130.49° h-6 sm:h-10"
+      src="arrow.svg"
+      alt="Arrow"
+    />
+  </div>
+
   </div>
 
   
@@ -206,7 +218,7 @@ export default function Demo() {
                         src={`/${selectedStyle}/${photo}`}
                         layout="fill"
                         objectFit="contain"
-                        alt="Interior"
+                        alt="Interior product"
                       />
                     )}
                   </div>
