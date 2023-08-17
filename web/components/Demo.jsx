@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-// // import PhoneFrame  from '/components/PhoneFrame'
+
 import Phone  from '../assets/rectangle.svg';
 import VideoDemo from './VideoDemo'
 import Spline from '@splinetool/react-spline';
@@ -132,15 +132,12 @@ export default function Demo() {
   const handleStyleClick = (style) => {
     setSelectedStyle((prevStyle) => (prevStyle === style ? prevStyle : style));
   };
-
     // Find the selected design style based on the selectedStyle
     const selectedDesignStyle = designStyles.find((style) => style.title === selectedStyle);
 
 
   return (
     <div className="relative flex justify-center flex-row space-x-3">  {/* Add space-x-10 for gap */}
-
-
 
 {/* List of Design Styles */}
 
@@ -173,6 +170,7 @@ export default function Demo() {
   </div>
         
 {/* Arrow */}
+
 <div className="-left-55 flex scale-[.75] absolute bottom-20">
     {/* Arrow SVG */}
     <span className="sr-only">Arrow design</span>
@@ -184,9 +182,7 @@ export default function Demo() {
   </div>
 
   </div>
-
-  
-  </div>
+    </div>
   </div>
 
 {/* Table with Interior Projects */}
@@ -219,7 +215,7 @@ export default function Demo() {
                         layout="fill"
                         objectFit="contain"
                         alt="Interior product"
-                        // width="500" height="600"
+                    
                       />
                     )}
                   </div>
