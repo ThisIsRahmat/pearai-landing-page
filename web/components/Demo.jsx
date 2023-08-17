@@ -165,7 +165,7 @@ export default function Demo() {
 
   <div className="flex justify-center items-center mt-10">
   {/* VideoDemo */}
-  <div className="relative z-10 sm:scale-[.95] basis-1/2 rotate-[7deg] bottom-6 left-6">
+  <div className="relative sm:scale-[.95] basis-1/2 rotate-[7deg] bottom-6 left-6">
     <VideoDemo className="absolute bottom-2 left-3" />
   </div>
         

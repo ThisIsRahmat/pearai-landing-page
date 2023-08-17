@@ -2,6 +2,7 @@
 'use client'
 import { useState } from 'react';
 import ClipLoader from "react-spinners/ClipLoader";
+import PopUp from './PopUp'
 
 export default function Waitlist() {
   const [waitlistData, setWaitlistData] = useState();
@@ -103,30 +104,8 @@ export default function Waitlist() {
             )}
         </form> 
           ) : (
-            <div className="text-gray-700">
-              <div>
-                Thank you for signing up. Your are waiter{" "}
-                <b>{waitlistData.priority}</b> on the waitlist.{" "}
-              </div>
-              <div>
-                Referral link is: <b>{waitlistData.referral_link}</b>
-              </div>
-              <div>
-                Total referrals: <b>{waitlistData.total_referrals}</b>
-              </div>
-              <div className="mt-4">
-                <button
-                  type="button"
-                  disabled={loading}
-                  onClick={() => {
-                    setWaitlistData();
-                  }}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-md px-3 py-2 w-full transition duration-300"
-                >
-                  Return to signup
-                </button>
-              </div>
-            </div>
+            <PopUp className="z-50" waitlistData={waitlistData} onClose={() => setWaitlistData(null)} />
+           
           )}
       </div>
       </div>
