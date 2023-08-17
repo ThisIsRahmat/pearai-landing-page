@@ -211,7 +211,7 @@ export default function Demo() {
                   
                     {photo && (
                       <Image
-                        src={`/${selectedStyle}/${photo}`}
+                        src={`${selectedStyle}/${photo}`}
                         alt="Interior product"
                         fill
                         sizes="100vw"
