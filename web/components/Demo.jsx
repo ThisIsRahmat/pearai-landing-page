@@ -214,11 +214,12 @@ export default function Demo() {
                   >
                   
                     {photo && (
-                      <img
+                      <Image
                         src={`/${selectedStyle}/${photo}`}
                         layout="fill"
                         objectFit="contain"
                         alt="Interior product"
+                        // width="500" height="600"
                       />
                     )}
                   </div>
