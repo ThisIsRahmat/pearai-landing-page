@@ -214,7 +214,7 @@ export default function Demo() {
                   >
                   
                     {photo && (
-                      <Image
+                      <img
                         src={`/${selectedStyle}/${photo}`}
                         layout="fill"
                         objectFit="contain"

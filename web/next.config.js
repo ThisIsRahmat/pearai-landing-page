@@ -11,8 +11,6 @@ module.exports = {
   
       return config
     },
-    images: {
-        domains: ["https://pearai-landing-page-git-dev-thisisrahmat.vercel.app/"],
-        },
+  
   
   }
