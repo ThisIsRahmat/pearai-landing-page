@@ -12,7 +12,7 @@ module.exports = {
       return config
     },
     images: {
-        domains: ["vercel.app"],
+        domains: ["https://pearai-landing-page-git-dev-thisisrahmat.vercel.app/"],
         },
   
   }
