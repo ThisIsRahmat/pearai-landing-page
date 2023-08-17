@@ -186,8 +186,8 @@ export default function Demo() {
   </div>
 
 {/* Table with Interior Projects */}
-<div className=" bg-white sm:border-[2.95px]  border-green-700 rounded-lg overflow-hidden mb-10 -mt-2 z-05 " style={{ width: '427.77px', height: '760px' }}>
-  <table className="  sm:border-[2.95px] w-full border-collapse rounded-l overflow-hidden  border-green-700 sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
+<div className=" bg-white sm:border-[2.95px]  border-[#004F30] rounded-lg overflow-hidden mb-10 -mt-2 z-05 " style={{ width: '427.77px', height: '760px' }}>
+  <table className="  sm:border-[2.95px] w-full border-collapse rounded-l overflow-hidden  border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
     <tbody>
       {selectedDesignStyle &&
         [...Array(Math.ceil(selectedDesignStyle.photos.length / 2))].map((_, rowIndex) => (
