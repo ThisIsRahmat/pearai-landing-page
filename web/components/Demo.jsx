@@ -21,12 +21,12 @@ const designStyles = [
       'contemporary_6.png',
     ],
     photo_titles: [
-      'contemporary_1.png',
-      'Small Glass Vase $31.99',
-      'Flores Table Lamp with Pleated Shade $69.97',
-      'Wabi-Sabi Wall Art $103.13',
-      'Jaxx Green Marble Side Table Short $499',
-      'contemporary_6.png',
+      'West Elm $1399',
+      'H&M $31.99',
+      'Crate & Barrel $70',
+      'ETSY $136',
+      'CB2 $499',
+      'West Elm $110',
     ], 
     product_links: [
       'https://www.westelm.com/products/benson-leather-chair-h11998/?pkey=cliving-room-chairs',
@@ -49,12 +49,12 @@ const designStyles = [
       'mid-century_modern_6.png',
     ],
     photo_titles: [
-      'Ogden Burled Wood Console Table $300',
-      'contemporary_2.png',
-      'Albers Red Yellow Green Geometric Squares $153.99',
-      'contemporary_4.png',
-      'Nora Dining Chair $313',
-      'Dome Antique Table Lamp $149.99',
+      'Target $300',
+      'West Elm $33',
+      'Wayfair $145',
+      'West Elm $49',
+      'Edloe Finch $313',
+      'World Market $150',
     ],
     product_links: [
       'https://www.target.com/p/ogden-burled-wood-console-table-threshold-designed-with-studio-mcgee/-/A-85630185',
@@ -77,12 +77,12 @@ const designStyles = [
       'scandinavian_6.png',
     ],
     photo_titles: [
-      'contemporary_1.png',
-      'Plastic Chair with Wooden Legs - White $59.36 ',
-      'Barnes Golden Natural Wood Nesting Coffee Tables 2 Piece Set $299.99',
-      'Black Bretson Accent Stool $96',
-      'AVEO Table Lamp ',
-      'Graphic Neutrals NO3 Poster $8.97',
+      'ETSY $59',
+      'Lowes $194 ',
+      'World Market $300',
+      'Joss & Main $96',
+      'Amazon $112',
+      'esenio $13',
     ],
     product_links: [
       'https://www.walmart.com/ip/Nordic-U-Shape-Vase-for-Flowers-Modern-Ceramic-Minimalist-Nordic-Boho-Vase-for-Centrepiece-Home-Decor-Entranceway-Kitchen-Table-or-Gift/2287871006?wmlspartner=wlpa&selectedSellerId=101294080',
@@ -106,12 +106,12 @@ const designStyles = [
       'coastal_6.png',
     ],
     photo_titles: [
-      'Faux Potted Plants $79.95',
-      'Slatted Wood Accent Chair $254.99',
-      'Sylvie Pale Blue Sea $54.99',
-      'White Seagrass Hamper With Lid $89.99',
-      'Costa Mesa Round Rattan Table $130.00',
-      'Blue Striped Linen Pillow Cover $44.00',
+      'Crate&Barrel $80',
+      'Target $254',
+      'Target $55',
+      'Container Store $90',
+      'Target $130',
+      'ETSY $44',
     ],
     product_links: [
       'https://www.crateandbarrel.com/faux-potted-fern/s575374?localedetail=US&srsltid=ASuE1wQb9PHcCZjodVg4PxJYpOiaLCN--mcDhA4SDuqbJ5VrIW1xH9bvaog',
@@ -166,7 +166,7 @@ export default function Demo() {
   <div className="flex justify-center items-center mt-10">
   {/* VideoDemo */}
   <div className="relative sm:scale-[.95] basis-1/2 rotate-[7deg] bottom-6 left-6">
-    <VideoDemo className="absolute bottom-2 left-3" />
+    <VideoDemo className="absolute bottom-2 left-3 " />
   </div>
         
 {/* Arrow */}
@@ -186,7 +186,7 @@ export default function Demo() {
   </div>
 
 {/* Table with Interior Projects */}
-<div className=" bg-white sm:border-[2.95px]  border-[#004F30] rounded-lg overflow-hidden mb-10 -mt-2 z-05 " style={{ width: '427.77px', height: '760px' }}>
+<div className=" bg-white sm:border-[2.95px]  border-[#004F30] rounded-lg overflow-hidden mb-10 -mt-2  " style={{ width: '427.77px', height: '760px' }}>
   <table className="  sm:border-[2.95px] w-full border-collapse rounded-l overflow-hidden  border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
     <tbody>
       {selectedDesignStyle &&

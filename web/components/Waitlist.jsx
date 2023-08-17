@@ -97,14 +97,17 @@ export default function Waitlist() {
                 "Get Early Access"
               )}
           </button>
-          {error && (
-              <div className="text-center mt-2 text-xs text-red-500 px-6">
+          {/* {error && (
+              <div className="text-center -mt-20 text-s transparent px-6">
                 {error}
               </div>
-            )}
+            )} */}
         </form> 
           ) : (
-            <PopUp className="z-50" waitlistData={waitlistData} onClose={() => setWaitlistData(null)} />
+            <div className="z-50">
+                <PopUp  waitlistData={waitlistData} onClose={() => setWaitlistData(null)} />
+            </div>
+          
            
           )}
       </div>
