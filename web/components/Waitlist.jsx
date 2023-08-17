@@ -1,49 +1,55 @@
 
 'use client'
 import { useState } from 'react';
+import ClipLoader from "react-spinners/ClipLoader";
 
 export default function Waitlist() {
-
   const [waitlistData, setWaitlistData] = useState();
   const [error, setError] = useState();
+  const [loading, setLoading] = useState(false);
 
- // Function to validate the email on the FE.
- function validateEmail(email) {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-    return true;
-  }
-  return false;
-}
 
-// Function to submit Waitlist data
-function submitWaitlist(data) {
-  if (!data.email) {
-    setError("Please enter your email");
-    return;
-  }
-  if (validateEmail(data.email) === false) {
-    setError("Please enter a valid email");
-    return;
+  // Function to validate the email on the FE.
+  function validateEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      return true;
+    }
+    return false;
   }
 
-  data.waitlist_id = 9808;
-  data.referral_link = document.URL;
+  // Function to submit Waitlist data
+  function submitWaitlist(data) {
+    if (!data.email) {
+      setError("Please enter your email");
+      return;
+    }
+    if (validateEmail(data.email) === false) {
+      setError("Please enter a valid email");
+      return;
+    }
 
-  fetch("https://api.getwaitlist.com/api/v1/waiter", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      setWaitlistData(data);
+    setLoading(true);
+
+    data.waitlist_id = 9808;
+    data.referral_link = document.URL;
+
+    fetch("https://api.getwaitlist.com/api/v1/waiter", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
     })
-    .catch((error) => {
-console.log("Testing whether emails are being submitted")
-    });
-}
+      .then((response) => response.json())
+      .then((data) => {
+        setWaitlistData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+      });
+  }
+
 
 
   return (
@@ -60,6 +66,7 @@ console.log("Testing whether emails are being submitted")
       </div>
 
       <div className="p-2 sm:-mt-6">
+      {!waitlistData ? (
         <form className="flex flex-col" method="POST">
           <input
             id="email"
@@ -67,20 +74,60 @@ console.log("Testing whether emails are being submitted")
             type="email"
             placeholder="Enter your Email"
             className="flex rounded-xl py-2 px-4 mb-3 bg-[#E5D3FF] text-[#004F30] sm:text-[21.05px] text-[15px] placeholder-custom"
-            onClick={() => {
-              submitWaitlist({
-                email: document.getElementById("email").value
-              });
-            }}
+            autoComplete="email"
+            onChange={(e) => e.stopPropagation()}
+            required
           />
 
           <button
             type="submit"
             className="flex rounded-xl justify-center py-2 px-4 shadow-sm bg-[#C6FD9D] sm:text-[21.05px] text-[#004F30] text-[15px]"
+            disabled={loading}
+            onClick={() => {
+              submitWaitlist({
+                email: document.getElementById("email").value
+              });
+            }}
           >
-            Get Early Access
+            
+            {loading ? (
+                <ClipLoader size={25} color={"#ffffff"} loading={true} />
+              ) : (
+                "Get Early Access"
+              )}
           </button>
-        </form>
+          {error && (
+              <div className="text-center mt-2 text-xs text-red-500 px-6">
+                {error}
+              </div>
+            )}
+        </form> 
+          ) : (
+            <div className="text-gray-700">
+              <div>
+                Thank you for signing up. Your are waiter{" "}
+                <b>{waitlistData.priority}</b> on the waitlist.{" "}
+              </div>
+              <div>
+                Referral link is: <b>{waitlistData.referral_link}</b>
+              </div>
+              <div>
+                Total referrals: <b>{waitlistData.total_referrals}</b>
+              </div>
+              <div className="mt-4">
+                <button
+                  type="button"
+                  disabled={loading}
+                  onClick={() => {
+                    setWaitlistData();
+                  }}
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-md px-3 py-2 w-full transition duration-300"
+                >
+                  Return to signup
+                </button>
+              </div>
+            </div>
+          )}
       </div>
       </div>
     </div>
