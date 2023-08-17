@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -212,11 +212,12 @@ export default function Demo() {
                     {photo && (
                       <Image
                         src={`/${selectedStyle}/${photo}`}
-                        layout="fill"
-                        objectFit="contain"
                         alt="Interior product"
-                    
-                      />
+                        fill
+                        sizes="100vw"
+                        style={{
+                          objectFit: "contain"
+                        }} />
                     )}
                   </div>
 
@@ -247,9 +248,6 @@ export default function Demo() {
 
 
     </div>
-  
-        
-
   );
 }
  

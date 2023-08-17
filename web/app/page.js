@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Logo from 'components/Logo';
 import Hero from 'components/Hero';
 import Waitlist from 'components/Waitlist';

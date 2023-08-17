@@ -1,4 +1,4 @@
-import Image from "next/legacy/image"
+import Image from "next/image"
 import frame from '/assets/phone-frame.svg'
 import clsx from 'clsx'
 
@@ -35,7 +35,10 @@ export default function PhoneFrame({
         className="pointer-events-none absolute inset-0 h-full w-full"
         unoptimized
         priority={priority}
-      />
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
     </div>
-  )
+  );
 }

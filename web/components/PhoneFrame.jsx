@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const PhoneFrame = ({ videoSrc }) => {
   return (
@@ -18,9 +18,11 @@ const PhoneFrame = ({ videoSrc }) => {
         className="w-full h-auto -rotate-45 scale-75"
         src="../assets/rectangle.svg"
         alt="Phone Frame"
-        objectFit="contain"
-        layout="fill"
-      />
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "contain"
+        }} />
     </div>
   );
 };
