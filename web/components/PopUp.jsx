@@ -3,6 +3,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { Facebook, Twitter, Mail, X } from 'lucide-react';
 import clsx from 'clsx';
 import Link from 'next/link';
+import Container from 'components/Container';
 
 function SocialLink({ className, href, children, icon: Icon }) {
     return (
@@ -19,6 +20,7 @@ export default function PopUp({ waitlistData, onClose }) {
   const cancelButtonRef = useRef(null);
 
   return (
+    // <Container>
     <Transition.Root show={open} as={Fragment}>
       <div className="fixed inset-0 flex justify-center items-center">
         <Dialog
@@ -31,6 +33,7 @@ export default function PopUp({ waitlistData, onClose }) {
           }}
           static
         >
+         
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -43,7 +46,7 @@ export default function PopUp({ waitlistData, onClose }) {
             <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
           </Transition.Child>
 
-          <div className="relative z-50 overflow-hidden rounded-xl text-center w-[675px] h-[300px]">
+          <div className="relative z-50 overflow-hidden rounded-xl text-center sm:w-[675px] sm:h-[300px] w-11/12 h-1/3">
             <div className="absolute top-0 right-0 p-4 sm:block">
               <button
                 type="button"
@@ -56,24 +59,24 @@ export default function PopUp({ waitlistData, onClose }) {
             </div>
             <div className="flex">
             {/* Left side of the page */}
-<div className="bg-[#00663E] p-10 text-[#D4BBF8] flex items-center justify-center">
-  <h1 className="text-[113.28px] font-bold text-center">
+<div className="bg-[#00663E] sm:p-10 text-[#D4BBF8] flex items-center justify-center">
+  <h1 className="sm:text-[113.28px] font-bold text-center">
     #{waitlistData.priority}
   </h1>
 </div>
               {/* Right side of the page */}
               <div className=" bg-[#D4BBF8] p-8 text-[#004F30]">
-                <Dialog.Title className="text-[18.91px] font-semibold leading-6">
+                <Dialog.Title className="sm:text-[18.91px] font-semibold sm:leading-6">
                   You are the {waitlistData.priority} person that joined the waitlist
                 </Dialog.Title>
-                <div className="py-4">
-                  <h1 className="text-[41.9px] uppercase leading-[39.05px] font-bold">Climbing up the waitlist</h1>
+                <div className="sm:py-4 py-2">
+                  <h1 className="sm:text-[41.9px] uppercase sm:leading-[39.05px] font-bold">Climbing up the waitlist</h1>
                 </div>
-                <div className="py-4">
-                  <p className="text-[11.75px]">Share with friends</p>
+                <div className="sm:py-4 py-2">
+                  <p className="sm:text-[11.75px] text-[11.75px]">Share with friends</p>
                 </div>
                 
-                <div className="flex flex-col space-y-4 items-center">
+                <div className="flex flex-col sm:space-y-4 items-center">
                   <ul role="list" className="flex">
                     <SocialLink href="www.facebook.com" icon={Facebook} />
                     <SocialLink href="www.twitter.com" icon={Twitter} />
@@ -85,6 +88,8 @@ export default function PopUp({ waitlistData, onClose }) {
           </div>
         </Dialog>
       </div>
+     
     </Transition.Root>
+    // </Container>
   );
 }

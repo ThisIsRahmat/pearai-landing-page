@@ -137,15 +137,12 @@ export default function Demo() {
 
 
   return (
-    <div className="relative flex justify-center flex-row space-x-3">  {/* Add space-x-10 for gap */}
+    <div className="relative flex justify-center flex-row sm:space-x-3">  {/* Add space-x-10 for gap */}
 
 {/* List of Design Styles */}
 
-{/* <div className="sm:space-y-2 w-1/3 sm:text-right text-[13.13px] sm:text-[19.04px]  z-05"> 
-<div className="flex-col">
-  <div class="basis-1/4"> */}
 
-<div className="sm:space-y-2 w-1/3 sm:text-right text-[13.13px] sm:text-[19.04px]  z-05"> 
+<div className="sm:space-y-2 1/3 sm:text-right text-[13.13px] sm:text-[19.04px]  z-05"> 
 <div className="flex-col">
   <div class="sm:basis-1/4">
   
@@ -166,36 +163,36 @@ export default function Demo() {
   ))}
   </div>
 
+  <div className="sm:flex sm:justify-center sm:items-center sm:mt-10 mb-20">
 
-  <div className="flex justify-center items-center mt-10">
-  {/* VideoDemo */}
-  <div className="relative sm:scale-[.95] basis-1/2 rotate-[7deg] bottom-6 left-6">
-    <VideoDemo className="absolute bottom-2 left-3 " />
-  </div>
-        
-{/* Arrow */}
+     {/* VideoDemo */}
+     <div className="  sm:relative scale-[.55] md:scale-[.95] absolute inset-x-10 top-4 rotate-[7deg] -left-20 sm:bottom-6 sm:left-6 sm:transform sm:-scale-x-100 ">
+        <VideoDemo className="absolute bottom-2 left-3 " />
+      </div>
 
-<div className="-left-55 flex scale-[.75] absolute bottom-20">
-    {/* Arrow SVG */}
-    <span className="sr-only">Arrow design</span>
-    <img
-      className=" left-10 w-auto rotate-130.49° h-6 sm:h-10"
-      src="arrow.svg"
-      alt="Arrow"
-    />
-  </div>
+      {/* Arrow */}
+      <div className="flex sm:scale-[.75] relative sm:absolute top-15 mx-10 left-10 ">
+        {/* Arrow SVG */}
+        <span className="sr-only">Arrow design</span>
+        <img
+          className="w-auto sm:rotate-130.49° h-6 sm:h-10 rotate-180 transform -scale-x-100"
+          src="arrow.svg"
+          alt="Arrow"
+        />
+      </div>
 
   </div>
     </div>
   </div>
+  
 
 {/* Table with Interior Projects */}
-<div className=" bg-white sm:border-[2.95px]  border-[#004F30] rounded-lg overflow-hidden mb-10 -mt-2  " style={{ width: '427.77px', height: '760px' }}>
-  <table className="  sm:border-[2.95px] w-full border-collapse rounded-l overflow-hidden  border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
+<div className=" overflow-hidden mb-10 -mt-2 sm:w-[427.77px] sm:h-[760px] h-1/2 2/3 ">
+<table className=" bg-white sm:border-[2.95px] sm:h-[150px] sm:w-full   rounded-lg overflow-hidden border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]">
     <tbody>
       {selectedDesignStyle &&
         [...Array(Math.ceil(selectedDesignStyle.photos.length / 2))].map((_, rowIndex) => (
-          <tr key={rowIndex} style={{ height: `${731 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
+          <tr className="rounded-lg"key={rowIndex} style={{ height: `${150 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
             {[0, 1].map((colIndex) => {
               const photoIndex = rowIndex * 2 + colIndex;
               const photo = selectedDesignStyle.photos[photoIndex];
@@ -204,8 +201,8 @@ export default function Demo() {
               return (
                 <td
                   key={colIndex}
-                  className="border-[2.95px] rounded-lg border-green-700 p-4"
-                  style={{ width: '50%', position: 'relative' }}
+                  className="border-[2.95px] rounded-lg border-[#004F30] sm:p-4 p-2 sm:w-1/2"
+                  style={{ position: 'relative' }}
                 >
                     <Link href={product_link}>
                   <div
@@ -226,10 +223,10 @@ export default function Demo() {
                   </div>
 
            
-                  <div className="text-center mt-2">
+                  <div className="text-center sm:mt-2">
   {photo_title && (
      <p
-     className="text-[12.23px] text-center text-transform: capitalize mb-2 leading-[15px] font-bold hover:underline-offset-2"
+     className="text-[12.23px] text-center text-transform: capitalize mb-2 sm:leading-[15px] font-bold "
    >
       {photo_title}
     </p>
@@ -245,7 +242,8 @@ export default function Demo() {
           </tr>
         ))}
     </tbody>
-  </table>
+</table>
+
 </div>
 
 
