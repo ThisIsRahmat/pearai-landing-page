@@ -57,15 +57,15 @@ export default function PopUp({ waitlistData, onClose }) {
                 <X className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <div className="flex">
+            <div className="flex flex-row">
             {/* Left side of the page */}
-<div className="bg-[#00663E] sm:p-10 text-[#D4BBF8] flex items-center justify-center">
-  <h1 className="sm:text-[113.28px] font-bold text-center">
+<div className="bg-[#00663E] sm:p-10 w-1/2 text-[#D4BBF8] flex items-center justify-center">
+  <h1 className="sm:text-[113.28px] text-[88.28px] font-bold text-center">
     #{waitlistData.priority}
   </h1>
 </div>
               {/* Right side of the page */}
-              <div className=" bg-[#D4BBF8] p-8 text-[#004F30]">
+              <div className=" w-1/2 bg-[#D4BBF8] p-8 text-[#004F30]">
                 <Dialog.Title className="sm:text-[18.91px] font-semibold sm:leading-6">
                   You are the {waitlistData.priority} person that joined the waitlist
                 </Dialog.Title>
