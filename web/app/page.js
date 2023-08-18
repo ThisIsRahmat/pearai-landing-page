@@ -9,18 +9,14 @@ import VideoDemo from 'components/VideoDemo';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between bg-[#D4BBF8] p-8 md:p-20">
+    <main className="flex min-h-screen flex-col justify-between bg-[#D4BBF8] p-8 md:p-20 space-y-2">
       <Logo />
-      <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start">
-        <div className="flex flex-col justify-start items-center md:items-start md:ml-4 md:w-[40%]"> {/* Adjust ml-4 and width */}
-          <Hero />
-          <br />
-          <br />
-          <Waitlist />
-        </div>
-  {/* <VideoDemo/> */}
-        {/* <Arrow/> */}
-        <Demo />
+      <div className="flex flex-col md:flex-row justify-center md:justify-between  md:items-start">
+      <div className="flex flex-col justify-start items-center md:items-start md:ml-4 md:w-[40%] sm:space-y-10 ">
+  <Hero />
+  <Waitlist className="mt-8 md:mt-20 " /> 
+</div>
+        <Demo className="mt-10" />
       </div>
     </main>
   );

@@ -141,12 +141,16 @@ export default function Demo() {
 
 {/* List of Design Styles */}
 
+{/* <div className="sm:space-y-2 w-1/3 sm:text-right text-[13.13px] sm:text-[19.04px]  z-05"> 
+<div className="flex-col">
+  <div class="basis-1/4"> */}
+
 <div className="sm:space-y-2 w-1/3 sm:text-right text-[13.13px] sm:text-[19.04px]  z-05"> 
 <div className="flex-col">
-  <div class="basis-1/4">
+  <div class="sm:basis-1/4">
   
   {designStyles.map((style) => (
-    <div key={style.title} className="mb-1">
+    <div key={style.title} className="right-15 pl-10 sm:mb-1">
       <button
         className={`uppercase sm:text-[19.04px] p-1 sm:-mt-1 -ml-10 tracking-wide ${
           selectedStyle === style.title
