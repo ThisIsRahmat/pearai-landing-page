@@ -120,32 +120,30 @@ export default function PopUp({ waitlistData, referralLink, onClose }) {
                 
                 <div className="flex flex-col sm:space-y-4 items-center">
                   <ul role="list" className="flex">
-                    <SocialLink href="https://www.facebook.com/sharer/sharer.php?u=blog.shahednasser.com&quote=Awesome%20Blog!" icon={Facebook} />
-                    <SocialLink href="www.twitter.com" icon={Twitter} />
+                    <SocialLink href={`https://www.facebook.com/sharer/sharer.php?u=Sign up to the Pear AI waitlist using my unique referral link: \n
+    You can get personalized recommendations by simply uploading your pins or pics.\n ${referralLink}`} icon={Facebook} />
+
+                   <SocialLink href={`https://twitter.com/intent/tweet?text=Sign%20up%20to%20the%20waitlist%20for%20Pear%20AI,%20an%20AI%20decorator%20that%20understands%20your%20style%20and%20budget%20using%20my%20referral%20link&url=${referralLink}`}icon={Twitter}/>
                     <SocialLink
-  href="mailto:?subject=Join Pear AI&body={encodeURIComponent(`
-    Hey,
+  href={`mailto:?subject=Join Pear AI&body=
+    Hey,\n
     
-    I wanted to let you know about Pear AI, an AI decorator that understands your style and budget. 
-    You can get personalized recommendations by simply uploading your pins or pics. 
-    Join the waitlist and sign up using my unique referral link:
+    I wanted to let you know about Pear AI, an AI decorator that understands your style and budget.\n
+    You can get personalized recommendations by simply uploading your pins or pics.\n
+    Join the waitlist and sign up using my unique referral link:\n
     
-    ${referralLink}
-    
+  ${referralLink} \n
+  \n
+  \n
     Cheers!
-  `)}"
+  `}
   icon={Mail}
 />
                   </ul>
                 </div>
                 <div className="sm:py-3 py-2"><p className="sm:text-[11.75px] text-[10.75px]">Or copy your unique referral link</p></div>
                 <div className=" text-[15px]">
-                {/* <input
-              className="rounded-xl bg-[#E5D3FF] text-[#004F30] text-[12px] py-1 px-2 mb-2"
-              value={referralLink}
-              readOnly
-              ref={inputRef}
-            /> */}
+             
 
 <div className="relative mt-2 flex items-center">
 <input
@@ -154,9 +152,9 @@ export default function PopUp({ waitlistData, referralLink, onClose }) {
               readOnly
               ref={inputRef}
             />
-            <div className="absolute inset-y-0 right-1">
+            {/* <div className="absolute inset-y-0 right-1">
               <button onClick={copyToClipboard} className="inline-flex">copy</button>
-            </div>
+            </div> */}
    
       </div>
           </div>
