@@ -127,7 +127,7 @@ const designStyles = [
 
 export default function Demo() {
 
-  const [selectedStyle, setSelectedStyle] = useState('Bohemian');
+  const [selectedStyle, setSelectedStyle] = useState('Mid-century modern');
 
   const handleStyleClick = (style) => {
     setSelectedStyle((prevStyle) => (prevStyle === style ? prevStyle : style));
