@@ -51,13 +51,15 @@ export default function Waitlist() {
       });
   }
 
-
-
   return (
-    <div className="bg-[#004F30] rounded-2xl sm:w-4/5 sm:h-[280px] h-[299px] w-[432px] sm:ml-4 mb-4">
 
-<div className="p-2"> 
-      <div className="p-4 mb-4">
+    <div className=" sm:w-4/5 sm:ml-4 sm:mb-4 lg:justify-center">
+    <div className="bg-[#004F30] rounded-2xl sm:h-[280px] sm:w-[432px] w-40% h-60%">
+    
+    {/* // <div className="bg-[#004F30] sm:rounded-2xl sm:w-4/5 sm:h-[280px] h-[299px] w-[432px] sm:ml-4 mb-4"> */}
+
+<div className="sm:p-2"> 
+      <div className="sm:p-4 sm:mb-4 p-4">
         {/* Paragraph content */}
         <div className="sm:pb-2 text-[#E5D3FF] sm:text-[18.12px] text-[15px]">
           Finally, an AI decorator that understands your style
@@ -66,7 +68,7 @@ export default function Waitlist() {
         </div>
       </div>
 
-      <div className="p-2 sm:-mt-6">
+      <div className="sm:p-2 p-4 sm:-mt-6">
       {!waitlistData ? (
         <form className="flex flex-col" method="POST">
           <input
@@ -105,7 +107,8 @@ export default function Waitlist() {
         </form> 
           ) : (
             <div className="z-50">
-                <PopUp  waitlistData={waitlistData} onClose={() => setWaitlistData(null)} />
+                <PopUp  waitlistData={waitlistData}  referralLink={waitlistData.referral_link}
+ onClose={() => setWaitlistData(null)} />
             </div>
           
            
@@ -113,5 +116,7 @@ export default function Waitlist() {
       </div>
       </div>
     </div>
+    </div>
+
   );
 }

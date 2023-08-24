@@ -23,6 +23,9 @@ module.exports = {
         translateY: '-20px',
         translateZ: '20px',
       },
+      scale: {
+        '-100': '-1',
+    }
     },
   },
   plugins: [],

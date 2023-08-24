@@ -4,40 +4,40 @@ import Image from "next/image";
 import Link from 'next/link';
 import { useState } from 'react';
 
-import Phone  from '../assets/rectangle.svg';
+
 import VideoDemo from './VideoDemo'
 import Spline from '@splinetool/react-spline';
 
 
 const designStyles = [
-  {
-    title: 'Contemporary',
-    photos: [
-      'contemporary_1.png',
-      'contemporary_2.png',
-      'contemporary_3.png',
-      'contemporary_4.png',
-      'contemporary_5.png',
-      'contemporary_6.png',
-    ],
-    photo_titles: [
-      'West Elm $1399',
-      'H&M $31.99',
-      'Crate & Barrel $70',
-      'ETSY $136',
-      'CB2 $499',
-      'West Elm $110',
-    ], 
-    product_links: [
-      'https://www.westelm.com/products/benson-leather-chair-h11998/?pkey=cliving-room-chairs',
-      'https://www2.hm.com/en_us/productpage.1124569001.html',
-      'https://www.crateandbarrel.com/flores-table-lamp-with-pleated-shade/s467511?localedetail=US&storeid=633&a=1552&campaignid=10461646743&adgroupid=103999389019&targetid=pla-298538622663&pla_sku=467511&pcat=HSW&ag=adult&gclid=CjwKCAjwt52mBhB5EiwA05YKo5KgzFM1v7jhpX6uLjvQTF26sbh82_wbS_amOI5wd2Qc3mBwMRrtzBoC-dkQAvD_BwE',
-      'https://www.etsy.com/listing/1517624894/wabi-sabi-wall-art-brown-textured-art?external=1&rec_type=ad&ref=landingpage_similar_listing_top-4&pro=1&frs=1&plkey=96075504ded112a2f1f04bc8a78a1341ebaf9fc4%3A1517624894',
-      'https://www.cb2.com/jaxx-green-marble-side-table-short/s647816',
-      'https://www.westelm.com/products/terracotta-vases-d15591/?pkey=cvases-botanicals',
-    ],
-    spline_url: 'contemporary_demo.mp4',
-  },
+  // {
+  // title: 'Contemporary',
+  //   photos: [
+  //   'contemporary_1.png',
+  //   'contemporary_2.png',
+  //   'contemporary_3.png',
+  //   'contemporary_4.png',
+  //   'contemporary_5.png',
+  //   'contemporary_6.png',
+  //    ],
+  //   photo_titles: [
+  //     'West Elm $1399',
+  //     'H&M $31.99',
+  //     'Crate & Barrel $70',
+  //     'ETSY $136',
+  //     'Crate & Barrel  $499',
+  //     'West Elm $110',
+  //   ], 
+  //   product_links: [
+  //     'https://www.westelm.com/products/benson-leather-chair-h11998/?pkey=cliving-room-chairs',
+  //     'https://www2.hm.com/en_us/productpage.1124569001.html',
+  //     'https://www.crateandbarrel.com/flores-table-lamp-with-pleated-shade/s467511?localedetail=US&storeid=633&a=1552&campaignid=10461646743&adgroupid=103999389019&targetid=pla-298538622663&pla_sku=467511&pcat=HSW&ag=adult&gclid=CjwKCAjwt52mBhB5EiwA05YKo5KgzFM1v7jhpX6uLjvQTF26sbh82_wbS_amOI5wd2Qc3mBwMRrtzBoC-dkQAvD_BwE',
+  //     'https://www.etsy.com/listing/1517624894/wabi-sabi-wall-art-brown-textured-art?external=1&rec_type=ad&ref=landingpage_similar_listing_top-4&pro=1&frs=1&plkey=96075504ded112a2f1f04bc8a78a1341ebaf9fc4%3A1517624894',
+  //     'https://www.cb2.com/jaxx-green-marble-side-table-short/s647816',
+  //     'https://www.westelm.com/products/terracotta-vases-d15591/?pkey=cvases-botanicals',
+  //   ],
+  //   spline_url: 'https://prod.spline.design/KPQv1yntXbsNDXLz/scene.splinecode',
+  // },
     {
     title: 'Mid-century modern',
     photos: [
@@ -64,17 +64,17 @@ const designStyles = [
       'https://edloefinch.com/products/nora-dining-chair-olive-green-set-of-2?variant=9533260922916&utm_source=google_shopping&utm_medium=organic&utm_campaign=organic_shopping&utm_content=shopify_US_979268501540_9533260922916&gclid=CjwKCAjwt52mBhB5EiwA05YKo726ngMkbTdDQH8Xmg3iM9ZPYtKgdXOJqBKjQnriBfkeQdURjANINRoCxs0QAvD_BwE',
       'https://www.worldmarket.com/p/dome-antique-brass-and-clear-glass-table-lamp-57006609.html?store=store393',
     ],
-    spline_url: 'contemporary_demo.mp4',
+    spline_url: 'https://prod.spline.design/HeQy5IPK6pZrcgtO/scene.splinecode',
   },
   {
-    title: 'Scandinavian',
+    title: 'Farmhouse',
     photos: [
-      'scandinavian_1.png',
-      'scandinavian_2.png',
-      'scandinavian_3.png',
-      'scandinavian_4.png',
-      'scandinavian_5.png',
-      'scandinavian_6.png',
+      'farmhouse_1.png',
+      'farmhouse_2.png',
+      'farmhouse_3.png',
+      'farmhouse_4.png',
+      'farmhouse_5.png',
+      'farmhouse_6.png',
     ],
     photo_titles: [
       'ETSY $59',
@@ -92,18 +92,18 @@ const designStyles = [
       'https://www.amazon.com/AVEO-Designs-Bedside-Bedrooms-Decoration/dp/B09Q3C224L',
       'https://desenio.com/p/posters-prints/art-prints/abstract-art/neutral-graphic-shapes/',
     ],
-    spline_url: 'contemporary_demo.mp4',
+    spline_url: 'https://prod.spline.design/qD568yXiUwYtR2YJ/scene.splinecode',
   },
 
   {
-    title: 'Coastal',
+    title: 'Bohemian',
     photos: [
-      'coastal_1.png',
-      'coastal_2.png',
-      'coastal_3.png',
-      'coastal_4.png',
-      'coastal_5.png',
-      'coastal_6.png',
+      'bohemian_1.png',
+      'bohemian_2.png',
+      'bohemian_3.png',
+      'bohemian_4.png',
+      'bohemian_5.png',
+      'bohemian_6.png',
     ],
     photo_titles: [
       'Crate&Barrel $80',
@@ -121,13 +121,13 @@ const designStyles = [
       'https://www.target.com/p/costa-mesa-round-rattan-wrapped-accent-table-tan-threshold-8482-designed-with-studio-mcgee/-/A-78182431?ref=tgt_adv_xsf&AFID=google&CPNG=Furniture&adgroup=249-17&lnm=d30042528f072ba8a22b19c81250437cd47a2f30330f0ed03551c4efdaf3409e',
       'https://www.etsy.com/listing/1521144795/blue-striped-linen-pillow-cover-modern?gpla=1&gao=1&',
     ],
-    spline_url: 'contemporary_demo.mp4',
+    spline_url: 'https://prod.spline.design/sf8cSkywkH6rkh65/scene.splinecode',
   },
 ];
 
 export default function Demo() {
 
-  const [selectedStyle, setSelectedStyle] = useState('Contemporary');
+  const [selectedStyle, setSelectedStyle] = useState('Mid-century modern');
 
   const handleStyleClick = (style) => {
     setSelectedStyle((prevStyle) => (prevStyle === style ? prevStyle : style));
@@ -137,16 +137,17 @@ export default function Demo() {
 
 
   return (
-    <div className="relative flex justify-center flex-row space-x-3">  {/* Add space-x-10 for gap */}
+    <div className="relative flex justify-center flex-row sm:space-x-3">  {/* Add space-x-10 for gap */}
 
 {/* List of Design Styles */}
 
-<div className="sm:space-y-2 w-1/3 sm:text-right text-[13.13px] sm:text-[19.04px]  z-05"> 
+
+<div className="sm:space-y-2 1/3 sm:text-right text-[13.13px] sm:text-[19.04px]  z-05"> 
 <div className="flex-col">
-  <div class="basis-1/4">
+  <div class="sm:basis-1/4">
   
   {designStyles.map((style) => (
-    <div key={style.title} className="mb-1">
+    <div key={style.title} className="right-15 pl-10 sm:mb-1">
       <button
         className={`uppercase sm:text-[19.04px] p-1 sm:-mt-1 -ml-10 tracking-wide ${
           selectedStyle === style.title
@@ -163,35 +164,36 @@ export default function Demo() {
   </div>
 
 
-  <div className="flex justify-center items-center mt-10">
-  {/* VideoDemo */}
-  <div className="relative sm:scale-[.95] basis-1/2 rotate-[7deg] bottom-6 left-6">
-    <VideoDemo className="absolute bottom-2 left-3 " />
-  </div>
-        
-{/* Arrow */}
+  <div className="sm:flex sm:justify-center sm:items-center sm:mt-10 mb-20">
 
-<div className="-left-55 flex scale-[.75] absolute bottom-20">
-    {/* Arrow SVG */}
-    <span className="sr-only">Arrow design</span>
-    <img
-      className=" left-10 w-auto rotate-130.49° h-6 sm:h-10"
-      src="arrow.svg"
-      alt="Arrow"
-    />
-  </div>
+     {/* VideoDemo */}
+     <div className="  sm:relative scale-[.55] md:scale-[.95] absolute inset-x-10 top-4  -left-20 sm:bottom-6 sm:left-6 sm:transform sm:-scale-x-100 ">
+        <VideoDemo className="absolute bottom-2 left-3 " splineUrl={selectedDesignStyle.spline_url} />
+      </div>
+
+      {/* Arrow */}
+      <div className="flex sm:scale-[.75] relative sm:absolute top-15 mx-10 left-10 sm:left-20 sm:mx-20 sm:inset-y-20 ">
+        {/* Arrow SVG */}
+        <span className="sr-only">Arrow</span>
+        <img
+          className="w-auto sm:rotate-130.49° h-6 sm:h-10 rotate-180 transform -scale-x-100  "
+          src="arrow.svg"
+          alt="Arrow"
+        />
+      </div>
 
   </div>
     </div>
   </div>
+  
 
 {/* Table with Interior Projects */}
-<div className=" bg-white sm:border-[2.95px]  border-[#004F30] rounded-lg overflow-hidden mb-10 -mt-2  " style={{ width: '427.77px', height: '760px' }}>
-  <table className="  sm:border-[2.95px] w-full border-collapse rounded-l overflow-hidden  border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}>
+<div className=" overflow-hidden mb-10 -mt-2 sm:w-[427.77px] sm:h-[760px] border-[#004F30] h-1/2 2/3 ">
+<table className=" bg-white sm:border-[2.95px] sm:h-[150px] sm:w-full   rounded-lg overflow-hidden border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]">
     <tbody>
       {selectedDesignStyle &&
         [...Array(Math.ceil(selectedDesignStyle.photos.length / 2))].map((_, rowIndex) => (
-          <tr key={rowIndex} style={{ height: `${731 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
+          <tr className="rounded-lg"key={rowIndex} style={{ height: `${150 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
             {[0, 1].map((colIndex) => {
               const photoIndex = rowIndex * 2 + colIndex;
               const photo = selectedDesignStyle.photos[photoIndex];
@@ -200,8 +202,8 @@ export default function Demo() {
               return (
                 <td
                   key={colIndex}
-                  className="border-[2.95px] rounded-lg border-green-700 p-4"
-                  style={{ width: '50%', position: 'relative' }}
+                  className="border-[2.95px] rounded-lg border-[#004F30] sm:p-4 p-2 sm:w-1/2"
+                  style={{ position: 'relative' }}
                 >
                     <Link href={product_link}>
                   <div
@@ -222,10 +224,10 @@ export default function Demo() {
                   </div>
 
            
-                  <div className="text-center mt-2">
+                  <div className="text-center sm:mt-2">
   {photo_title && (
      <p
-     className="text-[12.23px] text-center text-transform: capitalize mb-2 leading-[15px] font-bold hover:underline-offset-2"
+     className="text-[12.23px] text-center text-transform: capitalize mb-2 sm:leading-[15px] font-bold "
    >
       {photo_title}
     </p>
@@ -241,7 +243,8 @@ export default function Demo() {
           </tr>
         ))}
     </tbody>
-  </table>
+</table>
+
 </div>
 
 
