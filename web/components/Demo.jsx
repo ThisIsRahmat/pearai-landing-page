@@ -67,14 +67,14 @@ const designStyles = [
     spline_url: 'https://prod.spline.design/HeQy5IPK6pZrcgtO/scene.splinecode',
   },
   {
-    title: 'Scandinavian',
+    title: 'Farmhouse',
     photos: [
-      'scandinavian_1.png',
-      'scandinavian_2.png',
-      'scandinavian_3.png',
-      'scandinavian_4.png',
-      'scandinavian_5.png',
-      'scandinavian_6.png',
+      'farmhouse_1.png',
+      'farmhouse_2.png',
+      'farmhouse_3.png',
+      'farmhouse_4.png',
+      'farmhouse_5.png',
+      'farmhouse_6.png',
     ],
     photo_titles: [
       'ETSY $59',
@@ -92,18 +92,18 @@ const designStyles = [
       'https://www.amazon.com/AVEO-Designs-Bedside-Bedrooms-Decoration/dp/B09Q3C224L',
       'https://desenio.com/p/posters-prints/art-prints/abstract-art/neutral-graphic-shapes/',
     ],
-    spline_url: 'contemporary_demo.mp4',
+    spline_url: 'https://prod.spline.design/qD568yXiUwYtR2YJ/scene.splinecode',
   },
 
   {
-    title: 'Coastal',
+    title: 'Bohemian',
     photos: [
-      'coastal_1.png',
-      'coastal_2.png',
-      'coastal_3.png',
-      'coastal_4.png',
-      'coastal_5.png',
-      'coastal_6.png',
+      'bohemian_1.png',
+      'bohemian_2.png',
+      'bohemian_3.png',
+      'bohemian_4.png',
+      'bohemian_5.png',
+      'bohemian_6.png',
     ],
     photo_titles: [
       'Crate&Barrel $80',
@@ -121,7 +121,7 @@ const designStyles = [
       'https://www.target.com/p/costa-mesa-round-rattan-wrapped-accent-table-tan-threshold-8482-designed-with-studio-mcgee/-/A-78182431?ref=tgt_adv_xsf&AFID=google&CPNG=Furniture&adgroup=249-17&lnm=d30042528f072ba8a22b19c81250437cd47a2f30330f0ed03551c4efdaf3409e',
       'https://www.etsy.com/listing/1521144795/blue-striped-linen-pillow-cover-modern?gpla=1&gao=1&',
     ],
-    spline_url: 'contemporary_demo.mp4',
+    spline_url: 'https://prod.spline.design/sf8cSkywkH6rkh65/scene.splinecode',
   },
 ];
 
@@ -162,6 +162,7 @@ export default function Demo() {
     </div>
   ))}
   </div>
+
 
   <div className="sm:flex sm:justify-center sm:items-center sm:mt-10 mb-20">
 

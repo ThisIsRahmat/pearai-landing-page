@@ -51,12 +51,10 @@ export default function Waitlist() {
       });
   }
 
-
-
   return (
 
-    <div className=" sm:w-4/5 sm:ml-4 sm:mb-4">
-    <div className="bg-[#004F30] rounded-2xl sm:h-[280px] sm:w-[432px] w-335px h-213px">
+    <div className=" sm:w-4/5 sm:ml-4 sm:mb-4 lg:justify-center">
+    <div className="bg-[#004F30] rounded-2xl sm:h-[280px] sm:w-[432px] w-40% h-60%">
     
     {/* // <div className="bg-[#004F30] sm:rounded-2xl sm:w-4/5 sm:h-[280px] h-[299px] w-[432px] sm:ml-4 mb-4"> */}
 
@@ -109,7 +107,8 @@ export default function Waitlist() {
         </form> 
           ) : (
             <div className="z-50">
-                <PopUp  waitlistData={waitlistData} onClose={() => setWaitlistData(null)} />
+                <PopUp  waitlistData={waitlistData}  referralLink={waitlistData.referral_link}
+ onClose={() => setWaitlistData(null)} />
             </div>
           
            

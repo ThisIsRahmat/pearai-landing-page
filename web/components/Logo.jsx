@@ -12,7 +12,7 @@ export default function Logo() {
             <Link href="#" className="-m-0.5 p-0.5">
               <span className="sr-only">Pear</span>
               <img
-                className="h-6 w-auto "
+                className="h-6 w-auto left-0 top-0  "
                 src="pear_logo.svg"
                 alt="Pear logo"
               />
