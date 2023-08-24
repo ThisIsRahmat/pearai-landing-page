@@ -25,7 +25,7 @@ const designStyles = [
       'H&M $31.99',
       'Crate & Barrel $70',
       'ETSY $136',
-      'CB2 $499',
+      'Crate & Barrel  $499',
       'West Elm $110',
     ], 
     product_links: [
@@ -36,7 +36,7 @@ const designStyles = [
       'https://www.cb2.com/jaxx-green-marble-side-table-short/s647816',
       'https://www.westelm.com/products/terracotta-vases-d15591/?pkey=cvases-botanicals',
     ],
-    spline_url: 'contemporary_demo.mp4',
+    spline_url: 'https://prod.spline.design/KPQv1yntXbsNDXLz/scene.splinecode',
   },
     {
     title: 'Mid-century modern',
@@ -64,7 +64,7 @@ const designStyles = [
       'https://edloefinch.com/products/nora-dining-chair-olive-green-set-of-2?variant=9533260922916&utm_source=google_shopping&utm_medium=organic&utm_campaign=organic_shopping&utm_content=shopify_US_979268501540_9533260922916&gclid=CjwKCAjwt52mBhB5EiwA05YKo726ngMkbTdDQH8Xmg3iM9ZPYtKgdXOJqBKjQnriBfkeQdURjANINRoCxs0QAvD_BwE',
       'https://www.worldmarket.com/p/dome-antique-brass-and-clear-glass-table-lamp-57006609.html?store=store393',
     ],
-    spline_url: 'contemporary_demo.mp4',
+    spline_url: 'https://prod.spline.design/HeQy5IPK6pZrcgtO/scene.splinecode',
   },
   {
     title: 'Scandinavian',
@@ -166,16 +166,16 @@ export default function Demo() {
   <div className="sm:flex sm:justify-center sm:items-center sm:mt-10 mb-20">
 
      {/* VideoDemo */}
-     <div className="  sm:relative scale-[.55] md:scale-[.95] absolute inset-x-10 top-4 rotate-[7deg] -left-20 sm:bottom-6 sm:left-6 sm:transform sm:-scale-x-100 ">
-        <VideoDemo className="absolute bottom-2 left-3 " />
+     <div className="  sm:relative scale-[.55] md:scale-[.95] absolute inset-x-10 top-4  -left-20 sm:bottom-6 sm:left-6 sm:transform sm:-scale-x-100 ">
+        <VideoDemo className="absolute bottom-2 left-3 " splineUrl={selectedDesignStyle.spline_url} />
       </div>
 
       {/* Arrow */}
-      <div className="flex sm:scale-[.75] relative sm:absolute top-15 mx-10 left-10 ">
+      <div className="flex sm:scale-[.75] relative sm:absolute top-15 mx-10 left-10 sm:left-20 sm:mx-20 sm:inset-y-20 ">
         {/* Arrow SVG */}
-        <span className="sr-only">Arrow design</span>
+        <span className="sr-only">Arrow</span>
         <img
-          className="w-auto sm:rotate-130.49° h-6 sm:h-10 rotate-180 transform -scale-x-100"
+          className="w-auto sm:rotate-130.49° h-6 sm:h-10 rotate-180 transform -scale-x-100  "
           src="arrow.svg"
           alt="Arrow"
         />
@@ -187,7 +187,7 @@ export default function Demo() {
   
 
 {/* Table with Interior Projects */}
-<div className=" overflow-hidden mb-10 -mt-2 sm:w-[427.77px] sm:h-[760px] h-1/2 2/3 ">
+<div className=" overflow-hidden mb-10 -mt-2 sm:w-[427.77px] sm:h-[760px] border-[#004F30] h-1/2 2/3 ">
 <table className=" bg-white sm:border-[2.95px] sm:h-[150px] sm:w-full   rounded-lg overflow-hidden border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]">
     <tbody>
       {selectedDesignStyle &&
