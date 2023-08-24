@@ -11,14 +11,23 @@ import Spline from '@splinetool/react-spline';
 
 const designStyles = [
   {
-    title: 'Contemporary',
+    // title: 'Contemporary',
+    // photos: [
+    //   'contemporary_1.png',
+    //   'contemporary_2.png',
+    //   'contemporary_3.png',
+    //   'contemporary_4.png',
+    //   'contemporary_5.png',
+    //   'contemporary_6.png',
+    // ],
+    title: 'Farmhouse',
     photos: [
-      'contemporary_1.png',
-      'contemporary_2.png',
-      'contemporary_3.png',
-      'contemporary_4.png',
-      'contemporary_5.png',
-      'contemporary_6.png',
+      'farmhouse_1.png',
+      'farmhouse_2.png',
+      'farmhouse_3.png',
+      'farmhouse_4.png',
+      'farmhouse_5.png',
+      'farmhouse_6.png',
     ],
     photo_titles: [
       'West Elm $1399',
