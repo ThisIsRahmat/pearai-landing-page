@@ -31,7 +31,7 @@ export default function Waitlist() {
 
     setLoading(true);
 
-    data.waitlist_id = 9808;
+    data.waitlist_id = 10119;
     data.referral_link = document.URL;
 
     fetch("https://api.getwaitlist.com/api/v1/waiter", {

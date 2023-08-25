@@ -10,34 +10,34 @@ import Spline from '@splinetool/react-spline';
 
 
 const designStyles = [
-  // {
-  // title: 'Contemporary',
-  //   photos: [
-  //   'contemporary_1.png',
-  //   'contemporary_2.png',
-  //   'contemporary_3.png',
-  //   'contemporary_4.png',
-  //   'contemporary_5.png',
-  //   'contemporary_6.png',
-  //    ],
-  //   photo_titles: [
-  //     'West Elm $1399',
-  //     'H&M $31.99',
-  //     'Crate & Barrel $70',
-  //     'ETSY $136',
-  //     'Crate & Barrel  $499',
-  //     'West Elm $110',
-  //   ], 
-  //   product_links: [
-  //     'https://www.westelm.com/products/benson-leather-chair-h11998/?pkey=cliving-room-chairs',
-  //     'https://www2.hm.com/en_us/productpage.1124569001.html',
-  //     'https://www.crateandbarrel.com/flores-table-lamp-with-pleated-shade/s467511?localedetail=US&storeid=633&a=1552&campaignid=10461646743&adgroupid=103999389019&targetid=pla-298538622663&pla_sku=467511&pcat=HSW&ag=adult&gclid=CjwKCAjwt52mBhB5EiwA05YKo5KgzFM1v7jhpX6uLjvQTF26sbh82_wbS_amOI5wd2Qc3mBwMRrtzBoC-dkQAvD_BwE',
-  //     'https://www.etsy.com/listing/1517624894/wabi-sabi-wall-art-brown-textured-art?external=1&rec_type=ad&ref=landingpage_similar_listing_top-4&pro=1&frs=1&plkey=96075504ded112a2f1f04bc8a78a1341ebaf9fc4%3A1517624894',
-  //     'https://www.cb2.com/jaxx-green-marble-side-table-short/s647816',
-  //     'https://www.westelm.com/products/terracotta-vases-d15591/?pkey=cvases-botanicals',
-  //   ],
-  //   spline_url: 'https://prod.spline.design/KPQv1yntXbsNDXLz/scene.splinecode',
-  // },
+  {
+    title: 'Contemporary',
+    photos: [
+      'mid-century_modern_1.png',
+      'mid-century_modern_2.png',
+      'mid-century_modern_3.png',
+      'mid-century_modern_4.png',
+      'mid-century_modern_5.png',
+      'mid-century_modern_6.png',
+    ],
+    photo_titles: [
+      'West Elm $1399',
+      'H&M $31.99',
+      'Crate & Barrel $70',
+      'ETSY $136',
+      'Crate & Barrel  $499',
+      'West Elm $110',
+    ], 
+    product_links: [
+      'https://www.westelm.com/products/benson-leather-chair-h11998/?pkey=cliving-room-chairs',
+      'https://www2.hm.com/en_us/productpage.1124569001.html',
+      'https://www.crateandbarrel.com/flores-table-lamp-with-pleated-shade/s467511?localedetail=US&storeid=633&a=1552&campaignid=10461646743&adgroupid=103999389019&targetid=pla-298538622663&pla_sku=467511&pcat=HSW&ag=adult&gclid=CjwKCAjwt52mBhB5EiwA05YKo5KgzFM1v7jhpX6uLjvQTF26sbh82_wbS_amOI5wd2Qc3mBwMRrtzBoC-dkQAvD_BwE',
+      'https://www.etsy.com/listing/1517624894/wabi-sabi-wall-art-brown-textured-art?external=1&rec_type=ad&ref=landingpage_similar_listing_top-4&pro=1&frs=1&plkey=96075504ded112a2f1f04bc8a78a1341ebaf9fc4%3A1517624894',
+      'https://www.cb2.com/jaxx-green-marble-side-table-short/s647816',
+      'https://www.westelm.com/products/terracotta-vases-d15591/?pkey=cvases-botanicals',
+    ],
+    spline_url: 'https://prod.spline.design/KPQv1yntXbsNDXLz/scene.splinecode',
+  },
     {
     title: 'Mid-century modern',
     photos: [
