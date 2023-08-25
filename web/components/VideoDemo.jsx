@@ -12,7 +12,8 @@ export default function VideoDemo({ splineUrl }) {
 
   return (
     <div key={key}>
-      <Spline scene={splineUrl} fetchpriority="high" />
+      <Spline scene={splineUrl} />
     </div>
   );
 }
+

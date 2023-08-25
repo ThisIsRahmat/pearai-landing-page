@@ -92,7 +92,7 @@ const designStyles = [
       'https://www.amazon.com/AVEO-Designs-Bedside-Bedrooms-Decoration/dp/B09Q3C224L',
       'https://desenio.com/p/posters-prints/art-prints/abstract-art/neutral-graphic-shapes/',
     ],
-    spline_url: 'https://prod.spline.design/qD568yXiUwYtR2YJ/scene.splinecode',
+    spline_url: 'https://prod.spline.design/jqEI8KkbnXawqeTN/scene.splinecode',
   },
 
   {
@@ -121,7 +121,7 @@ const designStyles = [
       'https://www.target.com/p/costa-mesa-round-rattan-wrapped-accent-table-tan-threshold-8482-designed-with-studio-mcgee/-/A-78182431?ref=tgt_adv_xsf&AFID=google&CPNG=Furniture&adgroup=249-17&lnm=d30042528f072ba8a22b19c81250437cd47a2f30330f0ed03551c4efdaf3409e',
       'https://www.etsy.com/listing/1521144795/blue-striped-linen-pillow-cover-modern?gpla=1&gao=1&',
     ],
-    spline_url: 'https://prod.spline.design/sf8cSkywkH6rkh65/scene.splinecode',
+    spline_url: 'https://prod.spline.design/bswqvQwFxPLO7XRE/scene.splinecode',
   },
 ];
 
@@ -192,10 +192,10 @@ export default function Demo() {
 {/* <div className=" rounded-lg overflow-hidden mb-10 -mt-2 z-05 " style={{ width: '427.77px', height: '760px' }}> */}
 <table className="border border-collapse  sm:border-[2.95px] sm:h-[150px] sm:w-full rounded-lg overflow-hidden border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]">
 {/* <table className="  sm:border-[2.95px] w-full border-collapse rounded-l overflow-hidden  border-green-700 sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}> */}
-    <tbody className="bg-white border border-collapse border-[#004F30]">
+    <tbody className="bg-white">
       {selectedDesignStyle &&
         [...Array(Math.ceil(selectedDesignStyle.photos.length / 2))].map((_, rowIndex) => (
-          <tr className="rounded-lg border border-[#004F30]"key={rowIndex} style={{ height: `${150 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
+          <tr className="rounded-lg"key={rowIndex} style={{ height: `${150 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
             {[0, 1].map((colIndex) => {
               const photoIndex = rowIndex * 2 + colIndex;
               const photo = selectedDesignStyle.photos[photoIndex];
@@ -204,7 +204,7 @@ export default function Demo() {
               return (
                 <td
                   key={colIndex}
-                  className="border-[2.95px]  border-[#004F30] sm:p-4 p-2 sm:w-1/2"
+                  className="border-[2.95px] rounded-lg border-[#004F30] sm:p-4 p-2 sm:w-1/2"
                   style={{ position: 'relative' }}
                 >
                     <Link href={product_link}>
@@ -219,7 +219,7 @@ export default function Demo() {
                         alt="Interior product"
                         fill
                         sizes="100vw"
-                       fetchpriority="high"
+                        fetchpriority="true"
                         style={{
                           objectFit: "contain"
                         }} />
