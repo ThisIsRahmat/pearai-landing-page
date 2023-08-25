@@ -92,7 +92,7 @@ const designStyles = [
       'https://www.amazon.com/AVEO-Designs-Bedside-Bedrooms-Decoration/dp/B09Q3C224L',
       'https://desenio.com/p/posters-prints/art-prints/abstract-art/neutral-graphic-shapes/',
     ],
-    spline_url: 'https://prod.spline.design/qD568yXiUwYtR2YJ/scene.splinecode',
+    spline_url: 'https://prod.spline.design/S1igUSmKYdPm1bcc/scene.splinecode',
   },
 
   {
@@ -168,7 +168,8 @@ export default function Demo() {
 
      {/* VideoDemo */}
      <div className="  sm:relative scale-[.55] md:scale-[.95] absolute inset-x-10 top-4  -left-20 sm:bottom-6 sm:left-6 sm:transform sm:-scale-x-100 ">
-        <VideoDemo className="absolute bottom-2 left-3 " splineUrl={selectedDesignStyle.spline_url} />
+        {/* <VideoDemo className="absolute bottom-2 left-3 " splineUrl={selectedDesignStyle.spline_url} /> */}
+        <VideoDemo/>
       </div>
 
       {/* Arrow */}
@@ -219,7 +220,7 @@ export default function Demo() {
                         alt="Interior product"
                         fill
                         sizes="100vw"
-                       fetchpriority="high"
+                        fetchpriority="true"
                         style={{
                           objectFit: "contain"
                         }} />
