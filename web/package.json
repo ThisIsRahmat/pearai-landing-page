@@ -28,6 +28,7 @@
     "three": "^0.155.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0"
+    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2"
   }
 }

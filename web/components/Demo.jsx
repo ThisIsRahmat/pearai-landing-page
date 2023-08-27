@@ -64,7 +64,7 @@ const designStyles = [
       'https://edloefinch.com/products/nora-dining-chair-olive-green-set-of-2?variant=9533260922916&utm_source=google_shopping&utm_medium=organic&utm_campaign=organic_shopping&utm_content=shopify_US_979268501540_9533260922916&gclid=CjwKCAjwt52mBhB5EiwA05YKo726ngMkbTdDQH8Xmg3iM9ZPYtKgdXOJqBKjQnriBfkeQdURjANINRoCxs0QAvD_BwE',
       'https://www.worldmarket.com/p/dome-antique-brass-and-clear-glass-table-lamp-57006609.html?store=store393',
     ],
-    spline_url: 'https://prod.spline.design/HeQy5IPK6pZrcgtO/scene.splinecode',
+    spline_url: 'https://my.spline.design/midcentury-c1c0bfd5e94be4591f8ec08368239e84/',
   },
   {
     title: 'Farmhouse',
@@ -92,7 +92,7 @@ const designStyles = [
       'https://www.amazon.com/AVEO-Designs-Bedside-Bedrooms-Decoration/dp/B09Q3C224L',
       'https://desenio.com/p/posters-prints/art-prints/abstract-art/neutral-graphic-shapes/',
     ],
-    spline_url: 'https://prod.spline.design/S1igUSmKYdPm1bcc/scene.splinecode',
+    spline_url: 'https://my.spline.design/farmhousecopy-dff267f1ca46b4e8394def617b9a867c/',
   },
 
   {
@@ -121,7 +121,7 @@ const designStyles = [
       'https://www.target.com/p/costa-mesa-round-rattan-wrapped-accent-table-tan-threshold-8482-designed-with-studio-mcgee/-/A-78182431?ref=tgt_adv_xsf&AFID=google&CPNG=Furniture&adgroup=249-17&lnm=d30042528f072ba8a22b19c81250437cd47a2f30330f0ed03551c4efdaf3409e',
       'https://www.etsy.com/listing/1521144795/blue-striped-linen-pillow-cover-modern?gpla=1&gao=1&',
     ],
-    spline_url: 'https://prod.spline.design/sf8cSkywkH6rkh65/scene.splinecode',
+    spline_url: 'https://my.spline.design/bohemian-20cd2a5b16b16022c1d65bd561f9e56f/',
   },
 ];
 
@@ -162,14 +162,28 @@ export default function Demo() {
     </div>
   ))}
   </div>
-
+       
+ 
 
   <div className="sm:flex sm:justify-center sm:items-center sm:mt-10 mb-20">
+  <VideoDemo  splineUrl={selectedDesignStyle.spline_url} /> 
+
+    <div className="">
+  {/* <iframe src='https://my.spline.design/midcentury-c1c0bfd5e94be4591f8ec08368239e84/'  frameborder='0'
+          width='100%'
+          height='100%'
+          style={{ position: 'absolute', top: 0, left: 0 }}></iframe> */}
+
+          </div>
 
      {/* VideoDemo */}
      <div className="  sm:relative scale-[.55] md:scale-[.95] absolute inset-x-10 top-4  -left-20 sm:bottom-6 sm:left-6 sm:transform sm:-scale-x-100 ">
+       
         {/* <VideoDemo className="absolute bottom-2 left-3 " splineUrl={selectedDesignStyle.spline_url} /> */}
-        <VideoDemo/>
+        {/* <VideoDemo/> */}
+
+        
+
       </div>
 
       {/* Arrow */}
@@ -191,29 +205,33 @@ export default function Demo() {
 {/* Table with Interior Projects */}
 <div className=" mb-10 -mt-2 sm:w-[427.77px] sm:h-[760px]  h-1/2 2/3 ">
 {/* <div className=" rounded-lg overflow-hidden mb-10 -mt-2 z-05 " style={{ width: '427.77px', height: '760px' }}> */}
-<table className="border border-collapse  sm:border-[2.95px] sm:h-[150px] sm:w-full rounded-lg overflow-hidden border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]">
-{/* <table className="  sm:border-[2.95px] w-full border-collapse rounded-l overflow-hidden  border-green-700 sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}> */}
-    <tbody className="bg-white border border-collapse border-[#004F30]">
-      {selectedDesignStyle &&
-        [...Array(Math.ceil(selectedDesignStyle.photos.length / 2))].map((_, rowIndex) => (
-          <tr className="rounded-lg border border-[#004F30]"key={rowIndex} style={{ height: `${150 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
-            {[0, 1].map((colIndex) => {
-              const photoIndex = rowIndex * 2 + colIndex;
-              const photo = selectedDesignStyle.photos[photoIndex];
-              const photo_title = selectedDesignStyle.photo_titles[photoIndex];
-              const product_link = selectedDesignStyle.product_links[photoIndex];
-              return (
-                <td
-                  key={colIndex}
-                  className="border-[2.95px]  border-[#004F30] sm:p-4 p-2 sm:w-1/2"
-                  style={{ position: 'relative' }}
-                >
-                    <Link href={product_link}>
+{/* <table className="border-[2.95px]  rounded-lg overflow-hidden border-green-700 sm:text-[12.23px] text-[4.9px] text-[#004F30]"> */}
+  
+<table className="  border-2 sm:h-[150px] sm:w-full border-collapse rounded-xl border-[#004F30]">
+  <tbody className=" bg-white border-[2.95px] border-green-700 rounded-lg">
+    {selectedDesignStyle &&
+      [...Array(Math.ceil(selectedDesignStyle.photos.length / 2))].map((_, rowIndex) => (
+        <tr
+          key={rowIndex}
+          className="rounded-lg"
+          style={{ height: `${150 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}
+        >
+          {[0, 1].map((colIndex) => {
+            const photoIndex = rowIndex * 2 + colIndex;
+            const photo = selectedDesignStyle.photos[photoIndex];
+            const photo_title = selectedDesignStyle.photo_titles[photoIndex];
+            const product_link = selectedDesignStyle.product_links[photoIndex];
+            return (
+              <td
+                key={colIndex}
+                className="border-[2.95px] border-[#004F30] sm:p-4 p-2 sm:w-1/2"
+                style={{ position: 'relative' }}
+              >
+                <Link href={product_link}>
                   <div
                     className="h-full flex items-center justify-center"
                     style={{ width: '100%', paddingTop: '98%', position: 'relative' }}
                   >
-                  
                     {photo && (
                       <Image
                         src={`/${selectedStyle}/${photo}`}
@@ -223,31 +241,29 @@ export default function Demo() {
                         fetchpriority="true"
                         style={{
                           objectFit: "contain"
-                        }} />
+                        }}
+                      />
                     )}
                   </div>
 
-           
                   <div className="text-center sm:mt-2">
-  {photo_title && (
-     <p
-     className="text-[12.23px] text-center text-transform: capitalize mb-2 sm:leading-[15px] font-bold "
-   >
-      {photo_title}
-    </p>
-  )}
-
-
-</div>
-</Link>
-
-                </td>
-              );
-            })}
-          </tr>
-        ))}
-    </tbody>
+                    {photo_title && (
+                      <p
+                        className="sm:text-[12.23px] text-[9.23px] text-center text-transform: capitalize mb-2 sm:leading-[15px] font-bold "
+                      >
+                        {photo_title}
+                      </p>
+                    )}
+                  </div>
+                </Link>
+              </td>
+            );
+          })}
+        </tr>
+      ))}
+  </tbody>
 </table>
+
 
 </div>
 
