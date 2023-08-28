@@ -81,7 +81,7 @@ export default function PopUp({ waitlistData, referralLink, onClose }) {
             <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
           </Transition.Child>
 
-          <div className="relative z-50 overflow-hidden rounded-xl text-center sm:w-[675px] sm:h-[300px] w-11/12 h-1/3">
+          <div className="relative z-50 overflow-hidden rounded-xl text-center sm:w-[675px] sm:h-[300px] w-11/12 h-1/2">
             <div className="absolute top-0 right-0 p-4 sm:block">
               <button
                 type="button"
@@ -92,19 +92,17 @@ export default function PopUp({ waitlistData, referralLink, onClose }) {
                 <X className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <div className="flex flex-row">
+            <div className="flex content-center flex-row">
             {/* Left side of the page */}
-            <div>
-
-           
-            </div>
-<div className="bg-[#00663E] sm:p-10 w-1/2 text-[#D4BBF8]  ">
-<Dialog.Title className="sm:text-[18.91px]  font-semibold sm:leading-6">
+        
+<div className="bg-[#00663E] sm:p-10 w-1/2  text-[#D4BBF8] p-8 sm:space-y-10 space-y-4 ">
+<Dialog.Title className="sm:text-[18.91px] content-center  font-semibold sm:leading-6">
                   You are the #{waitlistData.priority} person that joined the Pear waitlist
                 </Dialog.Title>
-  <div className="items-center justify-center">
-  <h1 className="sm:text-[113.28px] text-[88.28px] font-bold text-center">
+  <div className="items-center justify-center text-center pr-2 ">
+  <h1 className="sm:text-[113.28px] text-[45px] item-center font-bold text-center">
     #{waitlistData.priority}
+   
   </h1>
   </div>
 </div>
@@ -126,22 +124,23 @@ export default function PopUp({ waitlistData, referralLink, onClose }) {
                    <SocialLink href={`https://twitter.com/intent/tweet?text=Sign%20up%20to%20the%20waitlist%20for%20Pear%20AI,%20an%20AI%20decorator%20that%20understands%20your%20style%20and%20budget%20using%20my%20referral%20link&url=${referralLink}`}icon={Twitter}/>
                     <SocialLink
   href={`mailto:?subject=Join Pear AI&body=
-    Hey,\n
-    
-    I wanted to let you know about Pear AI, an AI decorator that understands your style and budget.\n
-    You can get personalized recommendations by simply uploading your pins or pics.\n
-    Join the waitlist and sign up using my unique referral link:\n
-    
-  ${referralLink} \n
-  \n
-  \n
-    Cheers!
+  Hey,\n
+
+  I wanted to let you know about Pear AI, an AI decorator that understands your style and budget.\n
+  
+  You can get personalized recommendations by simply uploading your pins or pics.\n
+  
+  Join the waitlist and sign up using my unique referral link: \n
+  
+  ${referralLink}
+  
+  Cheers!
   `}
   icon={Mail}
 />
                   </ul>
                 </div>
-                <div className="sm:py-3 py-2"><p className="sm:text-[11.75px] text-[10.75px]">Or copy your unique referral link</p></div>
+                <div className="sm:py-3 py-2"><p className="sm:text-[11.75px] text-[12.75px]">Or copy your unique referral link</p></div>
                 <div className=" text-[15px]">
              
 

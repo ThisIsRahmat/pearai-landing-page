@@ -23,6 +23,14 @@ module.exports = {
         translateY: '-20px',
         translateZ: '20px',
       },
+      // custom opposite transform utilities
+      transformOrigin: {
+        'opposite': '100% 100%',
+      },
+      translate: {
+        oppositeX: '-20px',
+        oppositeY: '20px',
+      },
       scale: {
         '-100': '-1',
     }

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 
+
 import VideoDemo from './VideoDemo'
 import Spline from '@splinetool/react-spline';
 
@@ -137,7 +138,7 @@ export default function Demo() {
 
 
   return (
-    <div className="relative flex justify-center flex-row sm:space-x-3">  {/* Add space-x-10 for gap */}
+    <div className="relative flex justify-center flex-row sm:space-x-3 space-x-2 lg:space-x-6">  {/* Add space-x-10 for gap */}
 
 {/* List of Design Styles */}
 
@@ -151,7 +152,7 @@ export default function Demo() {
       <button
         className={`uppercase sm:text-[19.04px] p-1 sm:-mt-1 -ml-10 tracking-wide ${
           selectedStyle === style.title
-            ? 'text-[#D4BBF8] font-semibold bg-[#004F30] rounded-md p-1 sm:pl-3 pr-3'
+            ? 'text-[#D4BBF8] font-semibold bg-[#004F30] rounded-md p-1 sm:pl-3 pr-2'
             : 'text-[#004F30] font-semibold p-1 sm:pl-3 pr-3'
         }`}
         style={{ whiteSpace: 'nowrap' }}
@@ -166,21 +167,18 @@ export default function Demo() {
 
   <div className="sm:flex sm:justify-center sm:items-center sm:mt-10 mb-20">
 
-     {/* VideoDemo */}
-     <div className="  sm:relative scale-[.55] md:scale-[.95] absolute inset-x-10 top-4  -left-20 sm:bottom-6 sm:left-6 sm:transform sm:-scale-x-100 ">
+
+<div className="  sm:relative scale-[.55] md:scale-[.95] absolute inset-x-10 -top-4 sm:top-4 -left-20 sm:bottom-6 sm:left-6 sm:transform sm:-scale-x-100 ">
         <VideoDemo className="absolute bottom-2 left-3 " splineUrl={selectedDesignStyle.spline_url} />
       </div>
 
       {/* Arrow */}
-      <div className="flex sm:scale-[.75] relative sm:absolute top-15 mx-10 left-10 sm:left-20 sm:mx-20 sm:inset-y-20 ">
-        {/* Arrow SVG */}
-        <span className="sr-only">Arrow</span>
-        <img
-          className="w-auto sm:rotate-130.49° h-6 sm:h-10 rotate-180 transform -scale-x-100  "
-          src="arrow.svg"
-          alt="Arrow"
-        />
-      </div>
+<div  className="flex sm:scale-[.95] relative sm:absolute mx-10 left-12 sm:left-20 sm:mx-20 sm:top-28 -top-4 ">
+
+
+<img class="w-auto sm:rotate-130.49° h-6 sm:h-10 rotate-180 transform -scale-x-100  " src="arrow.svg" alt="Arrow"/>
+
+</div>
 
   </div>
     </div>
@@ -190,12 +188,13 @@ export default function Demo() {
 {/* Table with Interior Projects */}
 <div className=" mb-10 -mt-2 sm:w-[427.77px] sm:h-[760px]  h-1/2 2/3 ">
 {/* <div className=" rounded-lg overflow-hidden mb-10 -mt-2 z-05 " style={{ width: '427.77px', height: '760px' }}> */}
-<table className="border border-collapse  sm:border-[2.95px] sm:h-[150px] sm:w-full rounded-lg overflow-hidden border-[#004F30] sm:text-[12.23px] text-[4.9px] text-[#004F30]">
+<div className=" rounded-lg ">
+<table className="  sm:border-[2.95px] sm:h-[150px] sm:w-full rounded-lg sm:overflow-auto overflow-hidden  sm:text-[12.23px] text-[4.9px] text-[#004F30]">
 {/* <table className="  sm:border-[2.95px] w-full border-collapse rounded-l overflow-hidden  border-green-700 sm:text-[12.23px] text-[4.9px] text-[#004F30]" style={{ background: 'white' }}> */}
-    <tbody className="bg-white border border-collapse border-[#004F30]">
+    <tbody className="bg-white   ">
       {selectedDesignStyle &&
         [...Array(Math.ceil(selectedDesignStyle.photos.length / 2))].map((_, rowIndex) => (
-          <tr className="rounded-lg border border-[#004F30]"key={rowIndex} style={{ height: `${150 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
+          <tr className=""key={rowIndex} style={{ height: `${150 / Math.ceil(selectedDesignStyle.photos.length / 2)}px` }}>
             {[0, 1].map((colIndex) => {
               const photoIndex = rowIndex * 2 + colIndex;
               const photo = selectedDesignStyle.photos[photoIndex];
@@ -204,7 +203,7 @@ export default function Demo() {
               return (
                 <td
                   key={colIndex}
-                  className="border-[2.95px]  border-[#004F30] sm:p-4 p-2 sm:w-1/2"
+                  className="border-[2.95px] border-[#004F30] sm:p-4 p-2 sm:w-1/2"
                   style={{ position: 'relative' }}
                 >
                     <Link href={product_link}>
@@ -230,7 +229,7 @@ export default function Demo() {
                   <div className="text-center sm:mt-2">
   {photo_title && (
      <p
-     className="text-[12.23px] text-center text-transform: capitalize mb-2 sm:leading-[15px] font-bold "
+     className="sm:text-[12.23px] text-[8px] text-center text-transform: capitalize mb-2 sm:leading-[15px] font-bold "
    >
       {photo_title}
     </p>
@@ -247,7 +246,7 @@ export default function Demo() {
         ))}
     </tbody>
 </table>
-
+</div>
 </div>
 
 

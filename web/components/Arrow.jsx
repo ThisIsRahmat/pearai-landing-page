@@ -8,11 +8,11 @@ export default function Logo() {
       {/* To-do: replace placeholder logo with pear logo */}
      
       
-      <div className="absolute  right-14 transform -translate-x-1/2">
+      <div className="absolute  right-14  -translate-x-1/2">
 
                         <span className="sr-only">Arrow design</span>
               <img
-                className="w-auto inset-x-0 bottom-0 rotate-130.49° h-6 sm:h-10 "
+                className="w-auto inset-x-0 bottom-0  h-6 sm:h-10 "
                 style={{}}
                 src="arrow.svg"
                 alt="Arrow"
